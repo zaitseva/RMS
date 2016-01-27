@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+$c-black:			#000000 !default;
+$c-white:			#ffffff !default;
+
+$c-gray-base:		#191919 !default;
+$c-gray-darker:		#262626 !default;
+$c-gray-dark:		#303030 !default; /* ex.#333333 и #323232 */
+$c-gray:			#b2b2b2 !default; /* active */
+$c-gray-light:		#eaeaea !default; /* hover ex. #f4f4f4 */
+$c-gray-lighter:	#f3f3f3 !default; /* norm ex. #f9f9f9 */
+
+
+/*$c-red-base:		#cc2d2d !default;*/
+$c-red-darker:		#cc2d2d !default; /* active */
+$c-red-dark:		#d42f2f !default; /* hover */
+$c-red:				#e63333 !default; /* norm */
+/*$c-red-light:		#e63333 !default;*/
+/*$c-red-lighter:	#e63333 !default;*/
+
+
+/*$c-green-base:	#60ad2e !default;*/
+$c-green-darker:	#409F2E !default;
+$c-green-dark:		#40AF32 !default;
+$c-green:			#50AF38 !default;
+/*$c-green-darker:	#60ad2e !default;
+$c-green-dark:		#65b332 !default;
+$c-green:			#6bba38 !default;
+*//*$c-green-light:	#9bd42a !default;*/
+$c-green-lighter:	#9bd42a !default;
+
+
+/*$c-blue-base:		#2589de !default;*/
+$c-blue-darker:		#2589de !default; /* active */
+$c-blue-dark:		#2995f2 !default; /* hover */
+$c-blue:			#2a9dff !default; /* norm */
+/*$c-blue-light:	#2a9dff !default;*/
+$c-blue-lighter:	#75BFFF !default; /* border */
+
+
+$max_width: 990px;
+
+
+
+
+@mixin anime($anitime: 200ms, $easing: ease-out){
+	-webkit-transition: all $anitime $easing;
+	-moz-transition: all $anitime $easing;
+	-ms-transition: all $anitime $easing;
+	-o-transition: all $anitime $easing;
+	transition: all $anitime $easing;
+	/*-webkit-transform: translateZ(0);*/
+}
+
+
+/*
+html, body { background: #f1f2f6; }
+*/
+html, body { background: #f1f2f6; height:100%;
+min-height:100%;}
+
+body {  
+	padding: 0; 
+	font-family: Arial;
+position:relative;
+  font-size: 13px;
+  line-height:20px; 
+ }
+
+a:link, a:visited {color:#4ea5bb; text-decoration: none;}
+
+a:active, a:focus {
+	color:#111111;
+	text-decoration: none;
+}
+a:hover {color:#111111; text-decoration: none;}
+/*
+Минимальная ширина - 320px, максимальная - 990px
+При ширине экрана более 990px содержимое страницы выравнивается по центру экрана.
+*/
+
+/*.b-header__nav-wrapper, footer, .b-content {
+	max-width: $max_width;
+	margin: 0 auto;
+}*/
+
+.nophone {
+	min-width: 320px;
+	body, .b-header__nav-wrapper, header, footer, .b-content { min-width: 320px; }
+}
+.phone {
+	min-width: 320px;
+	body, .b-header__nav-wrapper,  header, .b-content { min-width: 320px; max-width: 990px; margin:0 auto; }
+}
+
+
+.nowrap { white-space: nowrap; }
+
+/*
+.d_table, .d_table_row, .d_table_cell
+отображение контейнеров в виде ячеек таблицы
+*/
+.d_table { display: table; width: 100%; }
+.d_table_row { display: table-row; }
+.d_table_cell { display: table-cell; vertical-align: middle; }
+
+header {height:99px;}
+.b-content {padding-bottom:120px; position:relative;}
+.b-banner {
+	.wrapper { min-width: 320px; max-width: 990px;  margin:0 auto;}
+	background: linear-gradient(to bottom,  #60708a 0%,#f1f2f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	img {width:100%; height:auto;}
+
+}
+footer {min-height:90px;position:absolute; bottom:0; left:0; width:100%; background:#002664; color:#ffffff; font-size:12px; line-height:16px;font-family: 'Montserrat', sans-serif;
+	.container-fluid { min-width: 320px; max-width: 990px;  margin:0 auto;}
+	.col {border-left:1px solid #011639;}
+	.col-xs-12 {padding:30px 0; text-align:center;}
+	.col-md-4 .col-xs-12 {border-left:1px solid #011639;}
+	.col-md-7 {text-align:left; padding:28px 20px;}
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+@media (min-width: 1400px) {
+
+}

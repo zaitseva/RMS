@@ -1,0 +1,134 @@
+a:hover, a:active, a:focus { outline: none; }
+
+a.link-blue {
+	color: #188EF2;
+	@include anime(275ms, ease-out);
+	&:hover {
+		text-decoration: none;
+		color: #1A8CD8;
+	}
+}
+
+a.link-black {
+	color: #000;
+	@include anime(275ms, ease-out);
+	&:hover {
+		text-decoration: none;
+		color: #333;
+	}
+}
+
+a.link-gray-medium {
+	color: #666;
+	@include anime(275ms, ease-out);
+	&:hover {
+		text-decoration: none;
+		color: #888;
+	}
+}
+
+a.link-gray-lite {
+	color: #b2b2b2;
+	@include anime(275ms, ease-out);
+	&:hover {
+		text-decoration: none;
+		color: #aaa;
+	}
+}
+a.link-back{
+    color: #231F20;
+    padding-left: 35px;
+    position: relative;
+    transition: all 175ms ease-out;
+        &:hover{
+            color: #231F20;
+                .icon{
+                    background-position: -25px 0;
+                    transition: all 175ms ease-out;
+                }
+        }
+}
+
+a.butt_red { 
+	font-size: 18px; line-height: 60px;
+	background: red; color: $c-white;
+	white-space: nowrap; display: inline-block;
+	padding: 0 50px;
+	-webkit-transition: background  175ms, -webkit-transform 175ms;
+	transition: background  175ms, transform 175ms;
+}
+a.butt_red:hover {
+	text-decoration: none;
+	background-color: red;
+}
+a.butt_red:active {
+	background-color: red;
+}
+a.butt-ico{
+    width: 100%; height: 65px;
+    text-align: center;
+    display: table;
+    font-size: 14px;
+    color: #231F20;
+    border: 1px solid #ccc;
+        &:hover{
+            cursor: pointer;
+        }
+}
+
+.butt-text {
+	display: table-cell;
+	width: 100%;
+	vertical-align: middle;
+}
+
+
+.butt-red, .butt_gray-lite {
+	width: 100%;
+	padding: 0;
+	font-size: 14px; line-height: 16px;
+	text-align: center;
+	display: table;
+	height: 55px;
+	@include anime(275ms, ease-out);
+}
+.b-button, .b-button_white {
+	width: 215px;
+	padding: 0;
+	font-size: 13px; line-height: 60px;
+	text-align: center;
+	display: inline-block;
+	vertical-align:top;
+	height: 60px;
+	border-radius:3px;
+	@include anime(275ms, ease-out);
+}
+.butt-detail{
+    height: 67px;
+}
+a.butt-red {
+	background: red; color: #fff;
+	&:hover {
+		text-decoration: none;
+		background-color: red;
+	}
+}
+
+a.b-button_white {
+	background: #ffffff; color: #4ea5bb;
+	border: 1px solid #4ea5bb;
+	&:hover {
+		text-decoration: none;
+		background-color: #4ea5bb;
+		color:#ffffff;
+	}
+}
+a.b-button {
+	background: #4ea5bb; color: #ffffff;
+	border: 1px solid #4ea5bb;
+	&:hover {
+		text-decoration: none;
+		background-color: #ffffff;
+		color:#4ea5bb;
+	}
+}

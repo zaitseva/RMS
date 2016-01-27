@@ -1,0 +1,1788 @@
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/grid";
+
+// Components
+@import "bootstrap/component-animations";
+@import "bootstrap/dropdowns";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pager";
+@import "bootstrap/labels";
+@import "bootstrap/badges";
+@import "bootstrap/thumbnails";
+@import "bootstrap/alerts";
+@import "bootstrap/progress-bars";
+@import "bootstrap/media";
+@import "bootstrap/responsive-embed";
+@import "bootstrap/close";
+@import "bootstrap/datepicker";
+
+
+// Components w/ JavaScript
+@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+@import "bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+$c-black:			#000000 !default;
+$c-white:			#ffffff !default;
+
+$c-gray-base:		#191919 !default;
+$c-gray-darker:		#262626 !default;
+$c-gray-dark:		#303030 !default; /* ex.#333333 и #323232 */
+$c-gray:			#b2b2b2 !default; /* active */
+$c-gray-light:		#eaeaea !default; /* hover ex. #f4f4f4 */
+$c-gray-lighter:	#f3f3f3 !default; /* norm ex. #f9f9f9 */
+
+
+/*$c-red-base:		#cc2d2d !default;*/
+$c-red-darker:		#cc2d2d !default; /* active */
+$c-red-dark:		#d42f2f !default; /* hover */
+$c-red:				#e63333 !default; /* norm */
+/*$c-red-light:		#e63333 !default;*/
+/*$c-red-lighter:	#e63333 !default;*/
+
+
+/*$c-green-base:	#60ad2e !default;*/
+$c-green-darker:	#409F2E !default;
+$c-green-dark:		#40AF32 !default;
+$c-green:			#50AF38 !default;
+/*$c-green-darker:	#60ad2e !default;
+$c-green-dark:		#65b332 !default;
+$c-green:			#6bba38 !default;
+*//*$c-green-light:	#9bd42a !default;*/
+$c-green-lighter:	#9bd42a !default;
+
+
+/*$c-blue-base:		#2589de !default;*/
+$c-blue-darker:		#2589de !default; /* active */
+$c-blue-dark:		#2995f2 !default; /* hover */
+$c-blue:			#2a9dff !default; /* norm */
+/*$c-blue-light:	#2a9dff !default;*/
+$c-blue-lighter:	#75BFFF !default; /* border */
+
+
+$max_width: 990px;
+
+
+
+
+@mixin anime($anitime: 200ms, $easing: ease-out){
+	-webkit-transition: all $anitime $easing;
+	-moz-transition: all $anitime $easing;
+	-ms-transition: all $anitime $easing;
+	-o-transition: all $anitime $easing;
+	transition: all $anitime $easing;
+	/*-webkit-transform: translateZ(0);*/
+}
+
+
+/*
+html, body { background: #f1f2f6; }
+*/
+html, body { background: #f1f2f6; height:100%;
+min-height:100%;}
+
+body {  
+	padding: 0; 
+	font-family: Arial;
+position:relative;
+  font-size: 13px;
+  line-height:20px; 
+ }
+
+a:link, a:visited {color:#4ea5bb; text-decoration: none;}
+
+a:active, a:focus {
+	color:#111111;
+	text-decoration: none;
+}
+a:hover {color:#111111; text-decoration: none;}
+/*
+Минимальная ширина - 320px, максимальная - 990px
+При ширине экрана более 990px содержимое страницы выравнивается по центру экрана.
+*/
+
+/*.b-header__nav-wrapper, footer, .b-content {
+	max-width: $max_width;
+	margin: 0 auto;
+}*/
+
+.nophone {
+	min-width: 320px;
+	body, .b-header__nav-wrapper, header, footer, .b-content { min-width: 320px; }
+}
+.phone {
+	min-width: 320px;
+	body, .b-header__nav-wrapper,  header, .b-content { min-width: 320px; max-width: 990px; margin:0 auto; }
+}
+
+
+.nowrap { white-space: nowrap; }
+
+/*
+.d_table, .d_table_row, .d_table_cell
+отображение контейнеров в виде ячеек таблицы
+*/
+.d_table { display: table; width: 100%; }
+.d_table_row { display: table-row; }
+.d_table_cell { display: table-cell; vertical-align: middle; }
+
+header {height:99px;}
+.b-content {padding-bottom:120px; position:relative;}
+.b-banner {
+	.wrapper { min-width: 320px; max-width: 990px;  margin:0 auto;}
+	background: linear-gradient(to bottom,  #60708a 0%,#f1f2f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	img {width:100%; height:auto;}
+
+}
+footer {min-height:90px;position:absolute; bottom:0; left:0; width:100%; background:#002664; color:#ffffff; font-size:12px; line-height:16px;font-family: 'Montserrat', sans-serif;
+	.container-fluid { min-width: 320px; max-width: 990px;  margin:0 auto;}
+	.col {border-left:1px solid #011639;}
+	.col-xs-12 {padding:30px 0; text-align:center;}
+	.col-md-4 .col-xs-12 {border-left:1px solid #011639;}
+	.col-md-7 {text-align:left; padding:28px 20px;}
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+@media (min-width: 1400px) {
+
+}
+
+/*!
+ * FullCalendar v2.3.2 Stylesheet
+ * Docs & License: http://fullcalendar.io/
+ * (c) 2015 Adam Shaw
+ */
+
+.fc {
+  direction: ltr;
+  text-align: left;
+}
+
+.fc-rtl {
+  text-align: right;
+}
+
+body .fc {
+  /* extra precedence to overcome jqui */
+  font-size: 1em;
+}
+
+/* Colors
+--------------------------------------------------------------------------------------------------*/
+
+.fc-unthemed {
+  th, td, thead, tbody, .fc-divider, .fc-row {
+    border-color: #ddd;
+  }
+  .fc-popover {
+    border-color: #ddd;
+    background-color: #fff;
+  }
+  .fc-divider {
+    background: #eee;
+  }
+  .fc-popover .fc-header {
+    background: #eee;
+    .fc-close {
+      color: #666;
+    }
+  }
+  .fc-today {
+    background: #fcf8e3;
+  }
+}
+
+.fc-highlight {
+  /* when user is selecting cells */
+  background: #bce8f1;
+  opacity: .3;
+  filter: alpha(opacity = 30);
+  /* for IE */
+}
+
+.fc-bgevent {
+  /* default look for background events */
+  background: rgb(143, 223, 130);
+  opacity: .3;
+  filter: alpha(opacity = 30);
+  /* for IE */
+}
+
+.fc-nonbusiness {
+  /* default look for non-business-hours areas */
+  /* will inherit .fc-bgevent's styles */
+  background: #d7d7d7;
+}
+
+/* Icons (inline elements with styled text that mock arrow icons)
+--------------------------------------------------------------------------------------------------*/
+
+.fc-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  font-size: 1em;
+  text-align: center;
+  overflow: hidden;
+  font-family: "Courier New", Courier, monospace;
+  /* don't allow browser text-selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  &:after {
+    position: relative;
+    margin: 0 -1em;
+    /* ensures character will be centered, regardless of width */
+  }
+}
+
+/*
+Acceptable font-family overrides for individual icons:
+	"Arial", sans-serif
+	"Times New Roman", serif
+
+NOTE: use percentage font sizes or else old IE chokes
+*/
+
+.fc-icon-left-single-arrow:after {
+  content: "\02039";
+  font-weight: bold;
+  font-size: 200%;
+  top: -7%;
+  left: 3%;
+}
+
+.fc-icon-right-single-arrow:after {
+  content: "\0203A";
+  font-weight: bold;
+  font-size: 200%;
+  top: -7%;
+  left: -3%;
+}
+
+.fc-icon-left-double-arrow:after {
+  content: "\000AB";
+  font-size: 160%;
+  top: -7%;
+}
+
+.fc-icon-right-double-arrow:after {
+  content: "\000BB";
+  font-size: 160%;
+  top: -7%;
+}
+
+.fc-icon-left-triangle:after {
+  content: "\25C4";
+  font-size: 125%;
+  top: 3%;
+  left: -2%;
+}
+
+.fc-icon-right-triangle:after {
+  content: "\25BA";
+  font-size: 125%;
+  top: 3%;
+  left: 2%;
+}
+
+.fc-icon-down-triangle:after {
+  content: "\25BC";
+  font-size: 125%;
+  top: 2%;
+}
+
+.fc-icon-x:after {
+  content: "\000D7";
+  font-size: 200%;
+  top: 6%;
+}
+
+/* Buttons (styled <button> tags, normalized to work cross-browser)
+--------------------------------------------------------------------------------------------------*/
+
+.fc button {
+  /* force height to include the border and padding */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* dimensions */
+  margin: 0;
+  height: 2.1em;
+  padding: 0 .6em;
+  /* text & cursor */
+  font-size: 1em;
+  /* normalize */
+  white-space: nowrap;
+  cursor: pointer;
+  &::-moz-focus-inner {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Firefox has an annoying inner border */
+
+.fc-state-default {
+  /* non-theme */
+  border: 1px solid;
+  &.fc-corner-left {
+    /* non-theme */
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  &.fc-corner-right {
+    /* non-theme */
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+/* icons in buttons */
+
+.fc button .fc-icon {
+  /* non-theme */
+  position: relative;
+  top: -0.05em;
+  /* seems to be a good adjustment across browsers */
+  margin: 0 .2em;
+  vertical-align: middle;
+}
+
+/*
+  button states
+  borrowed from twitter bootstrap (http://twitter.github.com/bootstrap/)
+*/
+
+.fc-state-default {
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.fc-state-hover, .fc-state-down, .fc-state-active, .fc-state-disabled {
+  color: #333333;
+  background-color: #e6e6e6;
+}
+
+.fc-state-hover {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+
+.fc-state-down, .fc-state-active {
+  background-color: #cccccc;
+  background-image: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.fc-state-disabled {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity = 65);
+  box-shadow: none;
+}
+
+/* Buttons Groups
+--------------------------------------------------------------------------------------------------*/
+
+.fc-button-group {
+  display: inline-block;
+}
+
+/*
+every button that is not first in a button group should scootch over one pixel and cover the
+previous button's border...
+*/
+
+.fc .fc-button-group > {
+  * {
+    /* extra precedence b/c buttons have margin set to zero */
+    float: left;
+    margin: 0 0 0 -1px;
+  }
+  :first-child {
+    /* same */
+    margin-left: 0;
+  }
+}
+
+/* Popover
+--------------------------------------------------------------------------------------------------*/
+
+.fc-popover {
+  position: absolute;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  .fc-header {
+    /* TODO: be more consistent with fc-head/fc-body */
+    padding: 2px 4px;
+    .fc-title {
+      margin: 0 2px;
+    }
+    .fc-close {
+      cursor: pointer;
+    }
+  }
+}
+
+.fc-ltr .fc-popover .fc-header .fc-title {
+  float: left;
+}
+
+.fc-rtl .fc-popover .fc-header {
+  .fc-close {
+    float: left;
+  }
+  .fc-title {
+    float: right;
+  }
+}
+
+.fc-ltr .fc-popover .fc-header .fc-close {
+  float: right;
+}
+
+/* unthemed */
+
+.fc-unthemed .fc-popover {
+  border-width: 1px;
+  border-style: solid;
+  .fc-header .fc-close {
+    font-size: .9em;
+    margin-top: 2px;
+  }
+}
+
+/* jqui themed */
+
+.fc-popover > .ui-widget-header + .ui-widget-content {
+  border-top: 0;
+  /* where they meet, let the header have the border */
+}
+
+/* Misc Reusable Components
+--------------------------------------------------------------------------------------------------*/
+
+.fc-divider {
+  border-style: solid;
+  border-width: 1px;
+}
+
+hr.fc-divider {
+  height: 0;
+  margin: 0;
+  padding: 0 0 2px;
+  /* height is unreliable across browsers, so use padding */
+  border-width: 1px 0;
+}
+
+.fc-clear {
+  clear: both;
+}
+
+.fc-bg, .fc-bgevent-skeleton, .fc-highlight-skeleton, .fc-helper-skeleton {
+  /* these element should always cling to top-left/right corners */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.fc-bg {
+  bottom: 0;
+  /* strech bg to bottom edge */
+  table {
+    height: 100%;
+    /* strech bg to bottom edge */
+  }
+}
+
+/* Tables
+--------------------------------------------------------------------------------------------------*/
+
+.fc {
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em;
+    /* normalize cross-browser */
+  }
+  th {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0;
+    vertical-align: top;
+  }
+  td {
+    border-style: solid;
+    border-width: 1px;
+    padding: 0;
+    vertical-align: top;
+    &.fc-today {
+      border-style: double;
+      /* overcome neighboring borders */
+    }
+  }
+  .fc-row {
+    /* extra precedence to overcome themes w/ .ui-widget-content forcing a 1px border */
+    /* no visible border by default. but make available if need be (scrollbar width compensation) */
+    border-style: solid;
+    border-width: 0;
+  }
+}
+
+/* Fake Table Rows
+--------------------------------------------------------------------------------------------------*/
+
+.fc-row {
+  table {
+    /* don't put left/right border on anything within a fake row.
+       the outer tbody will worry about this */
+    border-left: 0 hidden transparent;
+    border-right: 0 hidden transparent;
+    /* no bottom borders on rows */
+    border-bottom: 0 hidden transparent;
+  }
+  &:first-child table {
+    border-top: 0 hidden transparent;
+    /* no top border on first row */
+  }
+  position: relative;
+  .fc-bg {
+    z-index: 1;
+  }
+  .fc-bgevent-skeleton, .fc-highlight-skeleton {
+    bottom: 0;
+    /* stretch skeleton to bottom of row */
+  }
+  .fc-bgevent-skeleton table {
+    height: 100%;
+    /* stretch skeleton to bottom of row */
+  }
+  .fc-highlight-skeleton {
+    table {
+      height: 100%;
+      /* stretch skeleton to bottom of row */
+    }
+    td {
+      border-color: transparent;
+    }
+  }
+  .fc-bgevent-skeleton {
+    td {
+      border-color: transparent;
+    }
+    z-index: 2;
+  }
+  .fc-highlight-skeleton {
+    z-index: 3;
+  }
+  .fc-content-skeleton {
+    position: relative;
+    z-index: 4;
+    padding-bottom: 2px;
+    /* matches the space above the events */
+  }
+  .fc-helper-skeleton {
+    z-index: 5;
+  }
+  .fc-content-skeleton td, .fc-helper-skeleton td {
+    /* see-through to the background below */
+    background: none;
+    /* in case <td>s are globally styled */
+    border-color: transparent;
+    /* don't put a border between events and/or the day number */
+    border-bottom: 0;
+  }
+  .fc-content-skeleton tbody td, .fc-helper-skeleton tbody td {
+    /* don't put a border between event cells */
+    border-top: 0;
+  }
+}
+
+/* Day Row (used within the header and the DayGrid)
+--------------------------------------------------------------------------------------------------*/
+
+/* highlighting cells & background event skeleton */
+
+/*
+row content (which contains day/week numbers and events) as well as "helper" (which contains
+temporary rendered events).
+*/
+
+/* Scrolling Container
+--------------------------------------------------------------------------------------------------*/
+
+.fc-scroller {
+  /* this class goes on elements for guaranteed vertical scrollbars */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  > * {
+    /* we expect an immediate inner element */
+    position: relative;
+    /* re-scope all positions */
+    width: 100%;
+    /* hack to force re-sizing this inner element when scrollbars appear/disappear */
+    overflow: hidden;
+    /* don't let negative margins or absolute positioning create further scroll */
+  }
+}
+
+/* Global Event Styles
+--------------------------------------------------------------------------------------------------*/
+
+.fc-event {
+  position: relative;
+  /* for resize handle and other inner positioning */
+  display: block;
+  /* make the <a> tag block */
+  font-size: .85em;
+  line-height: 1.3;
+  border-radius: 3px;
+  border: 1px solid #3a87ad;
+  /* default BORDER color */
+  background-color: #3a87ad;
+  /* default BACKGROUND color */
+  font-weight: normal;
+  /* undo jqui's ui-widget-header bold */
+  color: #fff;
+  /* default TEXT color */
+  text-decoration: none;
+  /* if <a> has an href */
+  &:hover {
+    color: #fff;
+    /* default TEXT color */
+    text-decoration: none;
+    /* if <a> has an href */
+  }
+}
+
+/* overpower some of bootstrap's and jqui's styles on <a> tags */
+
+.ui-widget .fc-event {
+  color: #fff;
+  /* default TEXT color */
+  text-decoration: none;
+  /* if <a> has an href */
+}
+
+.fc-event {
+  &[href], &.fc-draggable {
+    cursor: pointer;
+    /* give events with links and draggable events a hand mouse pointer */
+  }
+}
+
+.fc-not-allowed {
+  /* to override an event's custom cursor */
+  cursor: not-allowed;
+  .fc-event {
+    /* to override an event's custom cursor */
+    cursor: not-allowed;
+  }
+}
+
+.fc-event {
+  .fc-bg {
+    /* the generic .fc-bg already does position */
+    z-index: 1;
+    background: #fff;
+    opacity: .25;
+    filter: alpha(opacity = 25);
+    /* for IE */
+  }
+  .fc-content {
+    position: relative;
+    z-index: 2;
+  }
+  .fc-resizer {
+    position: absolute;
+    z-index: 3;
+  }
+}
+
+/* Horizontal Events
+--------------------------------------------------------------------------------------------------*/
+
+/* events that are continuing to/from another week. kill rounded corners and butt up against edge */
+
+.fc-ltr .fc-h-event.fc-not-start, .fc-rtl .fc-h-event.fc-not-end {
+  margin-left: 0;
+  border-left-width: 0;
+  padding-left: 1px;
+  /* replace the border with padding */
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.fc-ltr .fc-h-event.fc-not-end, .fc-rtl .fc-h-event.fc-not-start {
+  margin-right: 0;
+  border-right-width: 0;
+  padding-right: 1px;
+  /* replace the border with padding */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* resizer */
+
+.fc-h-event .fc-resizer {
+  /* positioned it to overcome the event's borders */
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  width: 5px;
+}
+
+/* left resizer  */
+
+.fc-ltr .fc-h-event .fc-start-resizer {
+  right: auto;
+  /* ignore the right and only use the left */
+  cursor: w-resize;
+  &:before, &:after {
+    right: auto;
+    /* ignore the right and only use the left */
+    cursor: w-resize;
+  }
+}
+
+.fc-rtl .fc-h-event .fc-end-resizer {
+  right: auto;
+  /* ignore the right and only use the left */
+  cursor: w-resize;
+  &:before, &:after {
+    right: auto;
+    /* ignore the right and only use the left */
+    cursor: w-resize;
+  }
+}
+
+/* right resizer */
+
+.fc-ltr .fc-h-event .fc-end-resizer {
+  left: auto;
+  /* ignore the left and only use the right */
+  cursor: e-resize;
+  &:before, &:after {
+    left: auto;
+    /* ignore the left and only use the right */
+    cursor: e-resize;
+  }
+}
+
+.fc-rtl .fc-h-event .fc-start-resizer {
+  left: auto;
+  /* ignore the left and only use the right */
+  cursor: e-resize;
+  &:before, &:after {
+    left: auto;
+    /* ignore the left and only use the right */
+    cursor: e-resize;
+  }
+}
+
+/* DayGrid events
+----------------------------------------------------------------------------------------------------
+We use the full "fc-day-grid-event" class instead of using descendants because the event won't
+be a descendant of the grid when it is being dragged.
+*/
+
+.fc-day-grid-event {
+  margin: 1px 2px 0;
+  /* spacing between events and edges */
+  padding: 0 1px;
+  .fc-content {
+    /* force events to be one-line tall */
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .fc-time {
+    font-weight: bold;
+  }
+  .fc-resizer {
+    /* enlarge the default hit area */
+    left: -3px;
+    right: -3px;
+    width: 7px;
+  }
+}
+
+/* Event Limiting
+--------------------------------------------------------------------------------------------------*/
+
+/* "more" link that represents hidden events */
+
+a.fc-more {
+  margin: 1px 3px;
+  font-size: .85em;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.fc-limited {
+  /* rows and cells that are hidden because of a "more" link */
+  display: none;
+}
+
+/* popover that appears when "more" link is clicked */
+
+.fc-day-grid .fc-row {
+  z-index: 1;
+  /* make the "more" popover one higher than this */
+}
+
+.fc-more-popover {
+  z-index: 2;
+  width: 220px;
+  .fc-event-container {
+    padding: 10px;
+  }
+}
+
+/* Toolbar
+--------------------------------------------------------------------------------------------------*/
+
+.fc-toolbar {
+  text-align: center;
+  margin-bottom: 1em;
+  .fc-left {
+    float: left;
+  }
+  .fc-right {
+    float: right;
+  }
+  .fc-center {
+    display: inline-block;
+  }
+}
+
+/* the things within each left/right/center section */
+
+.fc .fc-toolbar > * > {
+  * {
+    /* extra precedence to override button border margins */
+    float: left;
+    margin-left: .75em;
+  }
+  :first-child {
+    /* extra precedence to override button border margins */
+    margin-left: 0;
+  }
+}
+
+/* the first thing within each left/center/right section */
+
+/* title text */
+
+.fc-toolbar {
+  h2 {
+    margin: 0;
+  }
+  button {
+    position: relative;
+  }
+  .fc-state-hover, .ui-state-hover {
+    z-index: 2;
+  }
+  .fc-state-down {
+    z-index: 3;
+  }
+  .fc-state-active, .ui-state-active {
+    z-index: 4;
+  }
+  button:focus {
+    z-index: 5;
+  }
+}
+
+/* button layering (for border precedence) */
+
+/* View Structure
+--------------------------------------------------------------------------------------------------*/
+
+/* undo twitter bootstrap's box-sizing rules. normalizes positioning techniques */
+/* don't do this for the toolbar because we'll want bootstrap to style those buttons as some pt */
+
+.fc-view-container * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  &:before, &:after {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+}
+
+.fc-view {
+  /* so dragged elements can be above the view's main element */
+  position: relative;
+  z-index: 1;
+  > table {
+    /* so dragged elements can be above the view's main element */
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* BasicView
+--------------------------------------------------------------------------------------------------*/
+
+/* day row structure */
+
+.fc-basicWeek-view .fc-content-skeleton, .fc-basicDay-view .fc-content-skeleton {
+  /* we are sure there are no day numbers in these views, so... */
+  padding-top: 1px;
+  /* add a pixel to make sure there are 2px padding above events */
+  padding-bottom: 1em;
+  /* ensure a space at bottom of cell for user selecting/clicking */
+}
+
+.fc-basic-view .fc-body .fc-row {
+  min-height: 4em;
+  /* ensure that all rows are at least this tall */
+}
+
+/* a "rigid" row will take up a constant amount of height because content-skeleton is absolute */
+
+.fc-row.fc-rigid {
+  overflow: hidden;
+  .fc-content-skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* week and day number styling */
+
+.fc-basic-view {
+  .fc-week-number, .fc-day-number {
+    padding: 0 2px;
+  }
+  td {
+    &.fc-week-number span, &.fc-day-number {
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
+  .fc-week-number {
+    text-align: center;
+    span {
+      /* work around the way we do column resizing and ensure a minimum width */
+      display: inline-block;
+      min-width: 1.25em;
+    }
+  }
+}
+
+.fc-ltr .fc-basic-view .fc-day-number {
+  text-align: right;
+}
+
+.fc-rtl .fc-basic-view .fc-day-number {
+  text-align: left;
+}
+
+.fc-day-number.fc-other-month {
+  opacity: 0.3;
+  filter: alpha(opacity = 30);
+  /* for IE */
+  /* opacity with small font can sometimes look too faded
+     might want to set the 'color' property instead
+     making day-numbers bold also fixes the problem */
+}
+
+/* AgendaView all-day area
+--------------------------------------------------------------------------------------------------*/
+
+.fc-agenda-view .fc-day-grid {
+  position: relative;
+  z-index: 2;
+  /* so the "more.." popover will be over the time grid */
+  .fc-row {
+    min-height: 3em;
+    /* all-day section will never get shorter than this */
+    .fc-content-skeleton {
+      padding-top: 1px;
+      /* add a pixel to make sure there are 2px padding above events */
+      padding-bottom: 1em;
+      /* give space underneath events for clicking/selecting days */
+    }
+  }
+}
+
+/* TimeGrid axis running down the side (for both the all-day area and the slot area)
+--------------------------------------------------------------------------------------------------*/
+
+.fc .fc-axis {
+  /* .fc to overcome default cell styles */
+  vertical-align: middle;
+  padding: 0 4px;
+  white-space: nowrap;
+}
+
+.fc-ltr .fc-axis {
+  text-align: right;
+}
+
+.fc-rtl .fc-axis {
+  text-align: left;
+}
+
+.ui-widget td.fc-axis {
+  font-weight: normal;
+  /* overcome jqui theme making it bold */
+}
+
+/* TimeGrid Structure
+--------------------------------------------------------------------------------------------------*/
+
+.fc-time-grid-container {
+  /* so slats/bg/content/etc positions get scoped within here */
+  position: relative;
+  z-index: 1;
+}
+
+.fc-time-grid {
+  /* so slats/bg/content/etc positions get scoped within here */
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+  /* so if height setting is 'auto', .fc-bg stretches to fill height */
+  table {
+    /* don't put outer borders on slats/bg/content/etc */
+    border: 0 hidden transparent;
+  }
+  > .fc-bg {
+    z-index: 1;
+  }
+  .fc-slats, > hr {
+    /* the <hr> AgendaView injects when grid is shorter than scroller */
+    position: relative;
+    z-index: 2;
+  }
+  .fc-bgevent-skeleton, .fc-content-skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .fc-bgevent-skeleton {
+    z-index: 3;
+  }
+  .fc-highlight-skeleton {
+    z-index: 4;
+  }
+  .fc-content-skeleton {
+    z-index: 5;
+  }
+  .fc-helper-skeleton {
+    z-index: 6;
+  }
+  .fc-slats {
+    td {
+      height: 1.5em;
+      border-bottom: 0;
+      /* each cell is responsible for its top border */
+    }
+    .fc-minor td {
+      border-top-style: dotted;
+    }
+    .ui-widget-content {
+      /* for jqui theme */
+      background: none;
+      /* see through to fc-bg */
+    }
+  }
+  .fc-highlight-container {
+    /* a div within a cell within the fc-highlight-skeleton */
+    position: relative;
+    /* scopes the left/right of the fc-highlight to be in the column */
+  }
+  .fc-highlight {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top and bottom will be in by JS */
+  }
+  .fc-event-container, .fc-bgevent-container {
+    /* a div within a cell within the fc-bgevent-skeleton */
+    position: relative;
+  }
+}
+
+/* TimeGrid Slats (lines that run horizontally)
+--------------------------------------------------------------------------------------------------*/
+
+/* TimeGrid Highlighting Slots
+--------------------------------------------------------------------------------------------------*/
+
+/* TimeGrid Event Containment
+--------------------------------------------------------------------------------------------------*/
+
+.fc-ltr .fc-time-grid .fc-event-container {
+  /* space on the sides of events for LTR (default) */
+  margin: 0 2.5% 0 2px;
+}
+
+.fc-rtl .fc-time-grid .fc-event-container {
+  /* space on the sides of events for RTL */
+  margin: 0 2px 0 2.5%;
+}
+
+.fc-time-grid {
+  .fc-event {
+    position: absolute;
+    z-index: 1;
+    /* scope inner z-index's */
+  }
+  .fc-bgevent {
+    position: absolute;
+    z-index: 1;
+    /* scope inner z-index's */
+    /* background events always span full width */
+    left: 0;
+    right: 0;
+  }
+}
+
+/* Generic Vertical Event
+--------------------------------------------------------------------------------------------------*/
+
+.fc-v-event {
+  &.fc-not-start {
+    /* events that are continuing from another day */
+    /* replace space made by the top border with padding */
+    border-top-width: 0;
+    padding-top: 1px;
+    /* remove top rounded corners */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  &.fc-not-end {
+    /* replace space made by the top border with padding */
+    border-bottom-width: 0;
+    padding-bottom: 1px;
+    /* remove bottom rounded corners */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+/* TimeGrid Event Styling
+----------------------------------------------------------------------------------------------------
+We use the full "fc-time-grid-event" class instead of using descendants because the event won't
+be a descendant of the grid when it is being dragged.
+*/
+
+.fc-time-grid-event {
+  overflow: hidden;
+  /* don't let the bg flow over rounded corners */
+  .fc-time, .fc-title {
+    padding: 0 1px;
+  }
+  .fc-time {
+    font-size: .85em;
+    white-space: nowrap;
+  }
+  &.fc-short {
+    .fc-content {
+      /* don't wrap to second line (now that contents will be inline) */
+      white-space: nowrap;
+    }
+    .fc-time, .fc-title {
+      /* put the time and title on the same line */
+      display: inline-block;
+      vertical-align: top;
+    }
+    .fc-time {
+      span {
+        display: none;
+        /* don't display the full time text... */
+      }
+      &:before {
+        content: attr(data-start);
+        /* ...instead, display only the start time */
+      }
+      &:after {
+        content: "\000A0-\000A0";
+        /* seperate with a dash, wrapped in nbsp's */
+      }
+    }
+    .fc-title {
+      font-size: .85em;
+      /* make the title text the same size as the time */
+      padding: 0;
+      /* undo padding from above */
+    }
+  }
+  .fc-resizer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 8px;
+    overflow: hidden;
+    line-height: 8px;
+    font-size: 11px;
+    font-family: monospace;
+    text-align: center;
+    cursor: s-resize;
+    &:after {
+      content: "=";
+    }
+  }
+}
+
+/* short mode, where time and title are on the same line */
+
+/* resizer */
+a:hover, a:active, a:focus { outline: none; }
+
+a.link-blue {
+	color: #188EF2;
+	@include anime(275ms, ease-out);
+	&:hover {
+		text-decoration: none;
+		color: #1A8CD8;
+	}
+}
+
+a.link-black {
+	color: #000;
+	@include anime(275ms, ease-out);
+	&:hover {
+		text-decoration: none;
+		color: #333;
+	}
+}
+
+a.link-gray-medium {
+	color: #666;
+	@include anime(275ms, ease-out);
+	&:hover {
+		text-decoration: none;
+		color: #888;
+	}
+}
+
+a.link-gray-lite {
+	color: #b2b2b2;
+	@include anime(275ms, ease-out);
+	&:hover {
+		text-decoration: none;
+		color: #aaa;
+	}
+}
+a.link-back{
+    color: #231F20;
+    padding-left: 35px;
+    position: relative;
+    transition: all 175ms ease-out;
+        &:hover{
+            color: #231F20;
+                .icon{
+                    background-position: -25px 0;
+                    transition: all 175ms ease-out;
+                }
+        }
+}
+
+a.butt_red { 
+	font-size: 18px; line-height: 60px;
+	background: red; color: $c-white;
+	white-space: nowrap; display: inline-block;
+	padding: 0 50px;
+	-webkit-transition: background  175ms, -webkit-transform 175ms;
+	transition: background  175ms, transform 175ms;
+}
+a.butt_red:hover {
+	text-decoration: none;
+	background-color: red;
+}
+a.butt_red:active {
+	background-color: red;
+}
+a.butt-ico{
+    width: 100%; height: 65px;
+    text-align: center;
+    display: table;
+    font-size: 14px;
+    color: #231F20;
+    border: 1px solid #ccc;
+        &:hover{
+            cursor: pointer;
+        }
+}
+
+.butt-text {
+	display: table-cell;
+	width: 100%;
+	vertical-align: middle;
+}
+
+
+.butt-red, .butt_gray-lite {
+	width: 100%;
+	padding: 0;
+	font-size: 14px; line-height: 16px;
+	text-align: center;
+	display: table;
+	height: 55px;
+	@include anime(275ms, ease-out);
+}
+.b-button, .b-button_white {
+	width: 215px;
+	padding: 0;
+	font-size: 13px; line-height: 60px;
+	text-align: center;
+	display: inline-block;
+	vertical-align:top;
+	height: 60px;
+	border-radius:3px;
+	@include anime(275ms, ease-out);
+}
+.butt-detail{
+    height: 67px;
+}
+a.butt-red {
+	background: red; color: #fff;
+	&:hover {
+		text-decoration: none;
+		background-color: red;
+	}
+}
+
+a.b-button_white {
+	background: #ffffff; color: #4ea5bb;
+	border: 1px solid #4ea5bb;
+	&:hover {
+		text-decoration: none;
+		background-color: #4ea5bb;
+		color:#ffffff;
+	}
+}
+a.b-button {
+	background: #4ea5bb; color: #ffffff;
+	border: 1px solid #4ea5bb;
+	&:hover {
+		text-decoration: none;
+		background-color: #ffffff;
+		color:#4ea5bb;
+	}
+}
+
+/*
+== malihu jquery custom scrollbar plugin ==
+Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
+*/
+
+
+
+/*
+CONTENTS: 
+	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). 
+	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. 
+	3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.
+	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. 
+	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. 
+	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS 
+		6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.
+*/
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+1. BASIC STYLE  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	.mCustomScrollbar{ -ms-touch-action: none; touch-action: none; /* MSPointer events - direct all pointer events to js */ }
+	.mCustomScrollbar.mCS_no_scrollbar{ -ms-touch-action: auto; touch-action: auto; }
+	
+	.mCustomScrollBox{ /* contains plugin's markup */
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		max-width: 100%;
+		outline: none;
+		direction: ltr;
+	}
+
+	.mCSB_container{ /* contains the original content */
+		overflow: hidden;
+		width: auto;
+		height: auto;
+	}
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+2. VERTICAL SCROLLBAR 
+y-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	.mCSB_inside > .mCSB_container{ margin-right: 30px; }
+
+	.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */
+	
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_container{ /* RTL direction/left-side scrollbar */
+		margin-right: 0;
+		margin-left: 30px;
+	}
+	
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-left: 0; } /* RTL direction/left-side scrollbar */
+
+	.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
+		position: absolute;
+		width: 16px;
+		height: auto;
+		left: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.mCSB_outside + .mCSB_scrollTools{ right: -26px; } /* scrollbar position: outside */
+	
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, 
+	.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ /* RTL direction/left-side scrollbar */
+		right: auto;
+		left: 0;
+	}
+	
+	.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ left: -26px; } /* RTL direction/left-side scrollbar (scrollbar position: outside) */
+
+	.mCSB_scrollTools .mCSB_draggerContainer{ /* contains the draggable element and dragger rail markup */
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0; 
+		height: auto;
+	}
+
+	.mCSB_scrollTools a + .mCSB_draggerContainer{ margin: 20px 0; }
+
+	.mCSB_scrollTools .mCSB_draggerRail{
+		width: 2px;
+		height: 100%;
+		margin: 0 auto;
+	}
+
+	.mCSB_scrollTools .mCSB_dragger{ /* the draggable element */
+		cursor: pointer;
+		width: 100%;
+		height: 30px; /* minimum dragger height */
+		z-index: 1;
+	}
+
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ /* the dragger element */
+		position: relative;
+		width: 7px;
+		height: 100%;
+		margin: 0 auto;
+		border-radius:7px;
+		text-align: center;
+	}
+	
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{ width: 12px; /* auto-expanded scrollbar */ }
+	
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 8px; /* auto-expanded scrollbar */ }
+
+	.mCSB_scrollTools .mCSB_buttonUp,
+	.mCSB_scrollTools .mCSB_buttonDown{
+		display: block;
+		position: absolute;
+		height: 20px;
+		width: 100%;
+		overflow: hidden;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+
+	.mCSB_scrollTools .mCSB_buttonDown{ bottom: 0; }
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+3. HORIZONTAL SCROLLBAR 
+x-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	.mCSB_horizontal.mCSB_inside > .mCSB_container{
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+	
+	.mCSB_horizontal.mCSB_outside > .mCSB_container{ min-height: 100%; }
+
+	.mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; } /* non-visible scrollbar */
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal{
+		width: auto;
+		height: 16px;
+		top: auto;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+	.mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{ bottom: -26px; } /* scrollbar position: outside */
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer{ margin: 0 20px; }
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+		width: 100%;
+		height: 2px;
+		margin: 7px 0;
+	}
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger{
+		width: 30px; /* minimum dragger width */
+		height: 100%;
+		left: 0;
+	}
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+		width: 100%;
+		height: 4px;
+		margin: 6px auto;
+	}
+	
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
+		height: 12px; /* auto-expanded scrollbar */
+		margin: 2px auto;
+	}
+	
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+		height: 8px; /* auto-expanded scrollbar */
+		margin: 4px 0;
+	}
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{
+		display: block;
+		position: absolute;
+		width: 20px;
+		height: 100%;
+		overflow: hidden;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+	
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{ left: 0; }
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{ right: 0; }
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+4. VERTICAL AND HORIZONTAL SCROLLBARS 
+yx-axis 
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	.mCSB_container_wrapper{
+		position: absolute;
+		height: auto;
+		width: auto;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin-right: 30px;
+		margin-bottom: 30px;
+	}
+	
+	.mCSB_container_wrapper > .mCSB_container{
+		padding-right: 30px;
+		padding-bottom: 30px;
+	}
+	
+	.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 20px; }
+	
+	.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 20px; }
+	
+	/* non-visible horizontal scrollbar */
+	.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 0; }
+	
+	/* non-visible vertical scrollbar/RTL direction/left-side scrollbar */
+	.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
+	.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 0; }
+	
+	/* RTL direction/left-side scrollbar */
+	.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 20px; }
+	
+	/* non-visible scrollbar/RTL direction/left-side scrollbar */
+	.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 0; }
+	
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper{ /* RTL direction/left-side scrollbar */
+		margin-right: 0;
+		margin-left: 30px;
+	}
+	
+	.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container{ 
+		padding-right: 0; 
+		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+	}
+	
+	.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container{ 
+		padding-bottom: 0; 
+		-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+	}
+	
+	.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden{
+		margin-right: 0; /* non-visible scrollbar */
+		margin-left: 0;
+	}
+	
+	/* non-visible horizontal scrollbar */
+	.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; }
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+5. TRANSITIONS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	.mCSB_scrollTools, 
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCSB_scrollTools .mCSB_buttonUp,
+	.mCSB_scrollTools .mCSB_buttonDown,
+	.mCSB_scrollTools .mCSB_buttonLeft,
+	.mCSB_scrollTools .mCSB_buttonRight{
+		-webkit-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+		-moz-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+		-o-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+		transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+	}
+	
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, /* auto-expanded scrollbar */
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail, 
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, 
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail{
+		-webkit-transition: width .2s ease-out .2s, height .2s ease-out .2s, 
+					margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
+					margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
+					opacity .2s ease-in-out, background-color .2s ease-in-out; 
+		-moz-transition: width .2s ease-out .2s, height .2s ease-out .2s, 
+					margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
+					margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
+					opacity .2s ease-in-out, background-color .2s ease-in-out; 
+		-o-transition: width .2s ease-out .2s, height .2s ease-out .2s, 
+					margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
+					margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
+					opacity .2s ease-in-out, background-color .2s ease-in-out; 
+		transition: width .2s ease-out .2s, height .2s ease-out .2s, 
+					margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
+					margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
+					opacity .2s ease-in-out, background-color .2s ease-in-out; 
+	}
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	/* 
+	----------------------------------------
+	6.1 THEMES 
+	----------------------------------------
+	*/
+	
+	/* default theme ("light") */
+
+	
+	.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
+	.mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 0; filter: "alpha(opacity=0)"; -ms-filter: "alpha(opacity=0)"; }
+	
+	.mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+	.mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+	.mCustomScrollBox:hover > .mCSB_scrollTools,
+	.mCustomScrollBox:hover ~ .mCSB_scrollTools,
+	.mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,
+	.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 1; filter: "alpha(opacity=100)"; -ms-filter: "alpha(opacity=100)"; }
+
+	.mCSB_scrollTools .mCSB_draggerRail{
+		background-color: transparent;
+	}
+
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		background-color: #b8b8b8;
+	}
+
+	.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+		background-color: #b8b8b8;
+	}
+	.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+		background-color: #b8b8b8;
+	}
