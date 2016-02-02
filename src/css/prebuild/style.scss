@@ -40,8 +40,9 @@ $c-blue-lighter:	#75BFFF !default; /* border */
 
 $max_width: 990px;
 
-
-
+.font102 {font-size:102px;line-height:90px;}
+.font96 {font-size:96px;line-height:75px;}
+.font59 {font-size:59px;line-height:59px;}
 
 @mixin anime($anitime: 200ms, $easing: ease-out){
 	-webkit-transition: all $anitime $easing;
@@ -57,7 +58,7 @@ $max_width: 990px;
 html, body { background: #f1f2f6; }
 */
 html, body { background: #f1f2f6; height:100%;
-min-height:100%;}
+min-height:100%;position:relative;}
 
 body {  
 	padding: 0; 
@@ -67,7 +68,7 @@ position:relative;
   line-height:20px; 
  }
 
-a:link, a:visited {color:#4ea5bb; text-decoration: none;}
+a:link, a:visited {color:#002664; text-decoration: none;}
 
 a:active, a:focus {
 	color:#111111;
@@ -103,25 +104,146 @@ a:hover {color:#111111; text-decoration: none;}
 .d_table { display: table; width: 100%; }
 .d_table_row { display: table-row; }
 .d_table_cell { display: table-cell; vertical-align: middle; }
+.b-fix_wrapper { min-width: 320px; max-width: 990px;  margin:0 auto;}
+.container.b-fix_wrapper { min-width: 320px; max-width: 990px;  margin:0 auto;}
 
-header {height:99px;}
-.b-content {padding-bottom:120px; position:relative;}
+.header {height:98px;position:relative; width:100%;box-shadow:0 1px 8px rgba(0,11,29,0.48); z-index:1;}
+
 .b-banner {
-	.wrapper { min-width: 320px; max-width: 990px;  margin:0 auto;}
-	background: linear-gradient(to bottom,  #60708a 0%,#f1f2f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	img {width:100%; height:auto;}
+	section {background:url('../icons/bg-banner.png') no-repeat center 0; margin-bottom:-103px;}
+	background: linear-gradient(to bottom,  #e1e6ed 0%,#c2c9d4 100%);
+	.b-run_img {position:absolute; top:105px; left:-40px;}
+	.b-load_run {
+		display:inline-block; vertical-align:top; width:49%; padding:20px; 
+		img {margin-top:10px; transform: rotate(45deg);}
+		.circle {text-align:center; vertical-align:middle;border:5px solid #d5d5d7;transform: rotate(-45deg);  border-top:5px solid #6f57a5; border-radius:100%; height:55px; width:55px;}
+	}
+
+	.b-manrun {background:url('../images/flagman.png') no-repeat center -15px; position:relative; min-height:434px; margin-bottom:35px;
+	
+		.num {color:#00bbac; font-family: 'Conv_Vitesse-Bold',Sans-Serif; font-size:13px; line-height:17px;}
+		.circle {border-top:5px solid #d5d5d7; border:5px solid #00bbac; transform: rotate(45deg); }
+		.b-load_run {
+		img {transform: rotate(-45deg);}
+		}
+	}
+	.b-womenrun {background:url('../images/flagwomen.png') no-repeat center -15px;position:relative;  min-height:434px; margin-bottom:35px;
+				.num {color:#6f57a5; font-family: 'Conv_Vitesse-Bold',Sans-Serif; font-size:13px; line-height:17px;}
+				.b-run_img {top:125px;}
+	}
+	.b-manrun_mob { position:relative; 		 padding:50px; background: linear-gradient(to bottom,  #e6e7e9 0%,#f9fafa 50%,#eceef2 100%);
+
+		.b-load_run {display:block;width:100%; padding:0; }
+		.b-run_results {display:block;width:100%; padding:0; text-align:left; margin-top:10px;}
+		.num {color:#00bbac; font-family: 'Conv_Vitesse-Bold',Sans-Serif; font-size:13px; line-height:17px;}
+		.circle {border-top:5px solid #d5d5d7; border:5px solid #00bbac; transform: rotate(45deg); }
+		.b-load_run {
+		img {transform: rotate(-45deg);}
+		}
+	}
+	.b-womenrun_mob {position:relative; border-left:1px solid #dbdbdb; padding:50px; background: linear-gradient(to bottom,  #e6e7e9 0%,#f9fafa 50%,#eceef2 100%);
+				.b-load_run {display:block;width:100%; padding:0; }
+				.b-run_results {display:block;width:100%; padding:0; text-align:left; margin-top:10px;}
+				.num {color:#6f57a5; font-family: 'Conv_Vitesse-Bold',Sans-Serif; display:block; font-size:13px; line-height:17px;}
+	}
+	.b-run_results {display:inline-block; vertical-align:top; width:49%; text-transform:uppercase; color:#4d4f53; padding:20px 27px;  font-size:11px; line-height:13px; font-family: 'Conv_Vitesse-Medium',Sans-Serif;}
+	.b-main_sec {text-align:center;
+		.logo {font-family: 'Conv_Vitesse-Bold',Sans-Serif; text-transform:uppercase; color:#002664;}
+		.logo img {display:block; margin:28px auto 14px auto;}
+		.logo span {display:block;}
+		
+	}
+	.total {text-align:center; font-family: 'Conv_Vitesse-Medium',Sans-Serif; font-size:12px; line-height:30px; padding:25px 0;  margin-bottom:23px; margin-left:-20px; margin-right:-20px; box-shadow: 0px 20px 20px -20px rgba(5,10,29,0.5);
+
+		.num {font-family: 'Conv_Vitesse-Bold',Sans-Serif;}
+		.txt {padding:0 25px; margin-left:25px; border-left:1px solid #2e3854;  line-height:30px; color:#ffffff; display:inline-block; vertical-align:top;}
+		div:before {content:''; display:inline-block; vertical-align:top; height:30px; width:23px; background:url('../icons/flag.png') no-repeat 0 0;}
+	}
+	.b-link {border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb; color:#002664; margin:25px auto; text-transform:uppercase; display:inline-block; vertical-align:top; 
+		a {display:inline-block; vertical-align:top; border-left:1px solid #dbdbdb; padding:0 13px; font-size:12px; line-height:47px;font-family: 'Conv_Gotham-Medium',Sans-Serif;}
+		a:first-child {border:0 none;}
+	}
+	.b-womenrun_mob, .b-manrun_mob {display:none;}
+	.social {display:inline-block; vertical-align:top; width:45px; height:47px; background:url('../icons/social.png') no-repeat center center;}
+
+	.b-read_more {text-align:center; font-size:12px; line-height:27px; margin-bottom:15px;font-family: 'Conv_GothamHTF-Medium',Sans-Serif; color:#002664; text-transform:uppercase; display:block; margin:0 auto; max-width:345px;}
+	.b-read_more span {position:relative;}	
+	.b-read_more span:after {content:''; display:inline-block; vertical-align:top; height:27px; width:6px; margin-left:10px; background:url('../icons/arrow_right.png') no-repeat 0 center;}
+}
+.b-race_list {
+	background:#364069; color:#ffffff; padding-top:103px;
+	.b-race_table {width:100%;
+	th { background:#364069;text-align:center; vertical-align:middle; padding:0;margin:0 -20px; font-size:12px; text-transform:uppercase; width:30%; font-family: 'Conv_Gotham-Medium',Sans-Serif; color:#ffffff; 
+	span {font-family: 'Conv_Gotham-Book'; color:#f7f7f7;}
+	.name {font-size:14px; line-height:20px;}
+	 a {color:#ffffff; display:block; text-align:left;}
+	}
+	th:first-child {border-right:1px solid #0c2439; text-align:left; width:70%;font-family: 'Conv_Vitesse-Medium',Sans-Serif; text-transform:none; padding:25px 20px;}
+	 tr:hover{ box-shadow:0 0 3px #060a1a;
+		td {background:#3a7dda;  text-align:left;}
+		td a { border:0 none;}
+		td:first-child {background:#ffffff;
+			a {color:#939598; border:0 none;}
+			span {color:#939598;}
+		}
+		 td .goto {display:block; }
+		 td .date {display:none;}
+		 h2 {background:#364069;}
+	 }
+	 tr { border-bottom:1px solid #1d2440; }
+	 tr td { background:#2b3457;text-align:center; vertical-align:middle;margin:0 -20px;   width:30%; font-family: 'Conv_Vitesse-Bold',Sans-Serif;
+		.goto {display:none; text-transform:uppercase;}
+		.goto:after {content:''; display:inline-block; vertical-align:top; float:right; height:20px; width:10px;background:url('../icons/arrow_right_02.png') no-repeat 0 center;}
+		
+		.date {text-transform:uppercase;}
+		 a {color:#ffffff; padding:25px 20px; display:block;}
+	}
+	 td:first-child  {background:#364069; text-align:left; width:70%;
+		.name {font-family: 'Conv_Vitesse-Medium',Sans-Serif; font-size:14px; line-height:25px;}
+		  span {font-family: 'Conv_Gotham-Book'; color:#f7f7f7; padding:0 10px; border-left:1px solid #161a33;}
+		  span:first-child {border-left:0 none; padding-left:0;}
+		  a {padding:25px 20px;}
+
+	}
+	}
+	h2 { margin:0; font-size:15px; font-weight:normal; padding:30px 20px 25px 20px; }
 
 }
-footer {min-height:90px;position:absolute; bottom:0; left:0; width:100%; background:#002664; color:#ffffff; font-size:12px; line-height:16px;font-family: 'Montserrat', sans-serif;
+.b-search-form {width:100%;  position:relative;     box-shadow: 0 0 8px 1px rgba(5,10,29,0.5);
+	.b-search-input {display:block; background:none; width:100%; padding:0 95px 0 25px; height:70px; line-height:70px; font-size:16px; background:#ffffff; border:0 none; font-family: 'Conv_Gotham-Medium'; color:#959595;}
+	.b-search__button { position:absolute; top:0; right:0; height:70px; display:block; width:70px; border:0 none; background-color:#3a7dda;  background-image: url('../icons/search.png');  background-repeat: no-repeat;  background-position: center center;}
+}
+.dropdown {padding:0;
+	a {padding:25px 20px;}
+	.caret {float:right; background:url('../icons/arrow_down.png') no-repeat 0 center; border:0 none; height:14px; width:20px;}
+	.dropdown-menu {border-radius:0; width:100%; padding:0;
+		li a {padding:15px 0; margin:0 15px; border-top:1px solid #E2E2E2; color:#959595; font-size:12px; line-height:20px;font-family: 'Conv_Gotham-Medium',Sans-Serif; }
+		li:first-child a {border:0 none;}
+		li:hover { background-color:#3a7dda; 
+			a { background-color:#3a7dda; color:#ffffff;border-top:1px solid #3a7dda;}
+		}
+		li:first-child:hover a {border:0 none;}
+		li.all {border-top:1px solid #E2E2E2;
+			a {border:0 none; margin:0; text-align:center; color:#0F244C; text-transform:uppercase;} 
+		}
+		li.all:hover a {color:#ffffff;}
+	}	
+}
+.dropdown.open {background:#002665;  box-shadow: 0 0 8px 1px rgba(5,10,29,0.5);
+	.caret { background:url('../icons/close.png') no-repeat 0 center; }
+}
+footer { width:100%; min-width:320px;background:#002664; color:#ffffff; font-size:12px; line-height:16px;font-family: 'Montserrat', sans-serif;
 	.container-fluid { min-width: 320px; max-width: 990px;  margin:0 auto;}
 	.col {border-left:1px solid #011639;}
-	.col-xs-12 {padding:30px 0; text-align:center;}
-	.col-md-4 .col-xs-12 {border-left:1px solid #011639;}
-	.col-md-7 {text-align:left; padding:28px 20px;}
+	.col-xs-6, .col-xs-3 {padding:25px 0; text-align:center;}
+	.col-md-4 .col-xs-3 {border-left:1px solid #011639; padding:33px 0;}
+	.col-md-7 {text-align:left; padding:25px 0 25px 15px;}
+	.col-md-7 img {padding-right:20px;}
 }
 
 
 @media (min-width: 768px) and (max-width: 991px) {
+	.col-md-4  {border-top:1px solid #011639;}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 }
@@ -130,3 +252,38 @@ footer {min-height:90px;position:absolute; bottom:0; left:0; width:100%; backgro
 @media (min-width: 1400px) {
 
 }
+@media screen and (max-width: 768px) {
+	.col-md-4  {border-top:1px solid #011639;}
+	.b-manrun {display:none;}
+	.b-womenrun {display:none;}
+	.b-banner .b-womenrun_mob, .b-banner .b-manrun_mob {display:block;}
+	.b-banner .total {box-shadow: none; margin:0;}
+	.b-race_list .b-race_table th {display:block; width:100%; margin:0; padding:10px 50px 50px 50px;}
+		.b-race_list .b-race_table th:first-child {display:block; width:100%; border:0 none; margin:0; padding:50px 50px 10px 50px;}
+
+	.b-race_list .b-race_table th .dropdown {background:#ffffff; width:100%; 
+		a {color:#0F244C; padding:30px;}
+		.caret { background:url('../icons/arrow_down_02.png') no-repeat 0 center;}
+		li:hover {  
+			a {  color:#ffffff;}
+		}
+		li.all {
+			a { color:#0F244C;} 
+		}
+		li.all:hover a {color:#ffffff;}
+	}
+
+
+
+}
+@media screen and (max-width: 480px) {
+.b-banner .b-womenrun_mob, .b-banner .b-manrun_mob {padding:20px;}
+.b-search-form .b-search-input {padding:0 80px 0 10px;}
+.b-race_list .b-race_table th .dropdown {
+		a {color:#0F244C; padding:10px;}
+}
+	.b-race_list .b-race_table th {padding:10px;}
+		.b-race_list .b-race_table th:first-child { padding: 10px;}
+
+}
+
