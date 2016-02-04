@@ -270,6 +270,7 @@ a:hover {color:#111111; text-decoration: none;}
     top: 70px; 
     width:100%;
     left:0;
+    z-index:1;
     .b-search-form {max-width:990px; min-width:320px; margin:0 auto;}    
 }
 #filtr.affix {
@@ -278,12 +279,42 @@ a:hover {color:#111111; text-decoration: none;}
     top: 140px; 
     width:100%;
     left:0;
+    z-index:0;
     .row {max-width:990px; min-width:320px; margin:0 auto;border:0 none;}    
 }
 .b-search-form {width:100%;  position:relative;     box-shadow: 0 0 8px 1px rgba(5,10,29,0.5);
 	.b-search-input {display:block; background:none; width:100%; padding:0 95px 0 25px; height:70px; line-height:70px; font-size:16px; background:#ffffff; border:0 none; font-family: 'Conv_Gotham-Medium'; color:#959595;}
 	.b-search__button { position:absolute; top:0; right:0; height:70px; display:block; width:70px; border:0 none; background-color:#3a7dda;  background-image: url('../icons/search.png');  background-repeat: no-repeat;  background-position: center center;}
+	.b-search_autocomplete {position:absolute; top:70px; left:0;width:100%; z-index:999; background:#ffffff;
+		.b-check_autocomplete {background:#002664; padding:20px 0;color:#ffffff;box-shadow:inset 0px 0 1px 0 #32435f; font-size:12px; line-height:20px;font-family: 'Conv_Gotham-Medium'; text-transform:uppercase;}
+		.b-check {background:#ffffff; height:20px; width:20px; border-radius:3px; display:inline-block; vertical-align:top; margin:0 30px 0 50px;}
+		.js-scroll {max-height:320px; overflow:hidden;}
+		
+		.mCSB_inside > .mCSB_container {margin-right:0;}
+		.row {display:block; border-bottom:1px solid #dbdbdb;}
+		.col-md-9 {font-family: 'Conv_Gotham-Book',Sans-Serif; font-size:16px; line-height:20px;color:#9a9b9c; padding:20px; position:relative;
+			.name { font-family: 'Conv_Vitesse-Book',Sans-Serif; color:#4d4f53;font-size:18px; line-height:20px;}
+			.view {display:none;position:absolute; right:20px; top:30px;font-size:12px; line-height:20px; color:#ffffff; text-align:right; font-family: 'Conv_Gotham-Medium';text-transform:uppercase; }
+		}
+		.col-md-3 {color:#4d4f53; background:#f5f5f7; box-shadow:inset 0px 1px 0 0 #e8e8eb; font-size:12px; line-height:20px; padding:30px 20px; text-align:right;font-family: 'Conv_Gotham-Medium';text-transform:uppercase;
+			.goto {display:none; text-transform:uppercase;}
+			.goto:after {content:''; display:inline-block; vertical-align:top; float:right; height:20px; width:10px;background:url('../icons/arrow_right_02.png') no-repeat 0 center;}
+
+		}
+		.row:hover {background:#002664;}
+		.row:hover .col-md-9 {background:#002664;color:#ffffff; 
+			.name {color:#ffffff;}
+			.view {display:inline-block; vertical-align:top;}
+		}
+		.row:hover .col-md-3 {background:#3a7dda;color:#ffffff; 
+			span {display:none;}
+			.goto {display:block; text-align:left; background:#3a7dda;}
+		}
+	}
+
+
 }
+
 .b-filtr_head	{
 	.row {box-shadow: 0px 20px 20px -20px rgba(5,10,29,0.5); border-bottom:1px solid #0c2439;  margin-bottom:20px;}
 
@@ -369,6 +400,9 @@ footer { width:100%; z-index:0; position:relative; min-width:320px;background:#0
 		}
 		li.all:hover a {color:#ffffff;}
 	}
+.b-search-form  .b-search_autocomplete .row:hover .col-md-9 {
+			.view {display:none;}
+		}
 
 
 
@@ -381,6 +415,9 @@ footer { width:100%; z-index:0; position:relative; min-width:320px;background:#0
 }
 	.b-filtr_head .col-md-3 {padding:10px;}
 	.b-filtr_head .col-md-9 { padding: 10px;}
+	.b-search-form  .b-search_autocomplete .row:hover .col-md-9 {
+			.view {display:none;}
+		}
 
 }
 
