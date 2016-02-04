@@ -16,19 +16,23 @@
 		<section>
 			<div class="b-fix_wrapper container">
 			<div class="row">
-				<div class="col-xs-6 col-md-3 b-manrun">
+				<div class="col-xs-3 col-sm-3 col-md-3 b-manrun">
 					<div class="b-run_results">Male <br/>Runners: <div class="num">259,321</div></div>
 					<div class="b-load_run"><div class="circle"><img src="./icons/man.png" alt=""/></div></div>
 					<img src="./images/manrun.png" alt="" class="b-run_img"/>
 				</div>
-				<div class="col-xs-12 col-md-6 b-main_sec">
+				<div class="col-xs-12  col-sm-6 col-md-6 b-main_sec">
+					<div id="nav">
+					<div>
 					<div class="logo"><img src="./icons/logo.png" alt=""/><span class="font96">NYRR</span><span class="font102">Race</span> <span class="font59">Results</span></div>
 					<div class="b-link">
 						<a href="#">Races</a>
 						<a href="#">Club Standings</a>
-						<a class="social" href="#"></a>
+						<a class="social" href="#">Share</a>
 					</div>
 					<a href="#" class="b-read_more"><span>Helping and inspiring people through Running. Learn More about NYRR</span></a>
+					</div>
+					</div>
 				</div>
 				<div class="col-xs-6 col-md-6 b-manrun_mob">
 						<div class="b-load_run"><div class="circle"><img src="./icons/man.png" alt=""/></div></div>
@@ -38,7 +42,7 @@
 						<div class="b-load_run"><div class="circle"><img src="./icons/women.png" alt=""/></div></div>
 						<div class="b-run_results">Male <br/>Runners: <span class="num">259,321</span></div>
 				</div>
-				<div class="col-xs-6 col-md-3 b-womenrun">
+				<div class="col-xs-3 col-sm-3 col-md-3 b-womenrun">
 					<div class="b-run_results">Male <br/>Runners: <span class="num">259,321</span></div>
 					<div class="b-load_run"><div class="circle"><img src="./icons/women.png" alt=""/></div></div>
 					<img src="./images/womenrun.png" alt="" class="b-run_img"/>
@@ -58,29 +62,99 @@
 					</form>
 				</div>
 				<!-- -/ панель поиска-->
-				 
-				<table class="b-race_table">
-				<tr>
-					<th>
-						<span class="name">2015 Races:</span> <span>15</span>
-						<div><span>All 2015 Race Events</span></div>
-					</th>
-					<th>
-						<div class="dropdown">
+				 <div class="b-filtr_head  container-fluid" id="filtr">
+					<div class="row">
+						<div class="col-xs-12 col-sm-9 col-md-9">
+							<span class="name">2015 Races:</span> <span>15</span>
+							<div><span>All 2015 Race Events</span></div>
+						</div>
+						<div class="col-xs-12 col-sm-3 col-md-3">
+							<div class="dropdown">
 							  <a role="button" data-toggle="dropdown" data-target="#" href="#">
 								Filter Options <span class="caret"></span>
 							  </a>
-							  <ul class="dropdown-menu" role="menu" >
+							  <div class="dropdown-menu">
+							  <ul class="nav nav-tabs nav-justified">
+								  <li class="active"><a href="#" data-toggle="tab">by year</a></li>
+								  <li><a href="#" data-toggle="tab">by distance</a></li>
+								</ul>
+							  <div class="js-scroll">
+							  <ul role="menu">
 								<li><a href="#">2015</a></li>
 								<li><a href="#">2014</a></li>
 								<li><a href="#">2013</a></li>
 								<li><a href="#">2012</a></li>
 								<li><a href="#">2011</a></li>
-								<li class="all"><a href="#">APPLY FILTERS</a></li>
+								<li><a href="#">2010</a></li>
+								<li><a href="#">2009</a></li>
+								<li><a href="#">2008</a></li>
+								<li><a href="#">2007</a></li>
+								<li><a href="#">2006</a></li>
 							  </ul>
+							  </div>
+							  <div class="all"><a href="#">APPLY FILTERS</a></div>
+							  </div>
 						</div>
-					</th>
-				</tr>
+						</div>
+					</div>
+				 </div>
+				<table class="b-race_table">
+			<tr>
+				<td>
+					<a href="#">
+					<div class="name">2015 Japan Run 4M</div>
+					<div><span>4 miles </span><span>Central Park</span></div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<span class="goto">Go To Race</span>
+					<span class="date">Dec:   30</span>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#">
+					<div class="name">2015 Japan Run 4M</div>
+					<div><span>4 miles </span><span>Central Park</span></div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<span class="goto">Go To Race</span>
+					<span class="date">Dec:   30</span>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#">
+					<div class="name">2015 Japan Run 4M</div>
+					<div><span>4 miles </span><span>Central Park</span></div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<span class="goto">Go To Race</span>
+					<span class="date">Dec:   30</span>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#">
+					<div class="name">2015 Japan Run 4M</div>
+					<div><span>4 miles </span><span>Central Park</span></div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<span class="goto">Go To Race</span>
+					<span class="date">Dec:   30</span>
+					</a>
+				</td>
+			</tr>
 			<tr>
 				<td>
 					<a href="#">
@@ -138,6 +212,63 @@
 					</a>
 				</td>
 			</tr>
+			<tr>
+				<td>
+					<a href="#">
+					<div class="name">Run as One (4M) Presented by JPMorgan Chase</div>
+					<div><span>4 miles </span><span>Central Park</span></div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<span class="goto">Go To Race</span>
+					<span class="date">Dec:   30</span>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#">
+					<div class="name">2015 Japan Run 4M</div>
+					<div><span>4 miles </span><span>Central Park</span></div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<span class="goto">Go To Race</span>
+					<span class="date">Dec:   30</span>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#">
+					<div class="name">Run as One (4M) Presented by JPMorgan Chase</div>
+					<div><span>4 miles </span><span>Central Park</span></div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<span class="goto">Go To Race</span>
+					<span class="date">Dec:   30</span>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="#">
+					<div class="name">2015 Japan Run 4M</div>
+					<div><span>4 miles </span><span>Central Park</span></div>
+					</a>
+				</td>
+				<td>
+					<a href="#">
+					<span class="goto">Go To Race</span>
+					<span class="date">Dec:   30</span>
+					</a>
+				</td>
+			</tr>
+
 			</table>
 			</div>
 		</div>

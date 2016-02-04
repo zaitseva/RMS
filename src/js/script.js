@@ -53,5 +53,27 @@ $(document).ready(function() {
 	oldIE = $('html').hasClass('lt-ie10');
 
 	doc = $(document); 
+	$('#search').affix({
+      offset: {
+        top: $('header').height()+$('.b-banner').height()
+      }
+	});	
+	$('#nav').affix({
+      offset: {
+        top:  $('header').height()+$('.b-banner').height()
+      }
+	});
+	$('#filtr').affix({
+      offset: {
+        top:  $('header').height()+$('.b-banner').height()
+      }
+	});
+	$('.js-scroll').mCustomScrollbar({
+				live:true,
+				advanced:{
+					updateOnContentResize: true
+				}
+			});
+
 	
 }); //  document ready

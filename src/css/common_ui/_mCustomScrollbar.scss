@@ -94,7 +94,7 @@ y-axis
 	.mCSB_scrollTools a + .mCSB_draggerContainer{ margin: 20px 0; }
 
 	.mCSB_scrollTools .mCSB_draggerRail{
-		width: 2px;
+		width: 3px;
 		height: 100%;
 		margin: 0 auto;
 	}
@@ -108,10 +108,10 @@ y-axis
 
 	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ /* the dragger element */
 		position: relative;
-		width: 7px;
+		width: 3px;
 		height: 100%;
 		margin: 0 auto;
-		border-radius:7px;
+		border-radius:0;
 		text-align: center;
 	}
 	
@@ -348,17 +348,17 @@ yx-axis
 	.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 1; filter: "alpha(opacity=100)"; -ms-filter: "alpha(opacity=100)"; }
 
 	.mCSB_scrollTools .mCSB_draggerRail{
-		background-color: transparent;
+		background-color: #949494;
 	}
 
 	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-		background-color: #b8b8b8;
+		background-color: #1c2d68;
 	}
 
 	.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
-		background-color: #b8b8b8;
+		background-color: #1c2d68;
 	}
 	.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
 	.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
-		background-color: #b8b8b8;
+		background-color: #1c2d68;
 	}
