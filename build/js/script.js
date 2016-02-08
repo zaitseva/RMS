@@ -68,6 +68,16 @@ $(document).ready(function() {
         top:  $('header').height()+$('.b-banner').height()
       }
 	});
+	$('#head').affix({
+      offset: {
+        top: $('header').height()
+      }
+	});
+	$('#submenu').affix({
+      offset: {
+        top: $('header').height()+70
+      }
+	});
 	$('.js-scroll').mCustomScrollbar({
 				live:true,
 				advanced:{
@@ -75,5 +85,36 @@ $(document).ready(function() {
 				}
 			});
 
-	
+	$('.map').mapInit();
 }); //  document ready
+
+// maps page
+(function($) { //create closure
+	$.fn.mapInit = function(options) {
+		this.each(function() {
+	
+			var cont = $(this);
+			var mississipi = new google.maps.LatLng(cont.data('lat'), cont.data('lng'));
+
+			function initialize() {
+				
+			  var mapOptions = {
+				scrollwheel: false,
+				zoom: 10,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				center: mississipi
+			  }
+			  map = new google.maps.Map(document.getElementById("map"), mapOptions);
+			}
+			
+
+
+//			initialize()
+			google.maps.event.addDomListener(window, 'load', initialize());	
+			
+
+	});
+}
+	//end of closure
+})(jQuery);
+

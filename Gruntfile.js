@@ -13,20 +13,32 @@ module.exports = function (grunt) {
 
 		concat: {
 			css: {
-				src: ['src/css/_bootstrap.scss','src/css/prebuild/*.scss','src/css/common_ui/*.scss' ],
+				src: ['src/css/prebuild/*.scss'],
 				dest: 'src/css/style.scss',
+			},
+			scrollcss: {
+				src: ['src/css/common_ui/*.scss' ],
+				dest: 'src/css/_mCustomScrollbar.css',
+			},
+			bootstrapcss: {
+				src: ['src/css/_bootstrap.scss'],
+				dest: 'src/css/bootstrap.scss',
 			},
 			js: {
 				src: ['src/js/script.js'],
 				dest: 'build/js/script.js',
 			},
-			appjs: {
-				src: ['src/js/app.js'],
-				dest: 'build/js/app.js',
+			jsscroll: {
+				src: ['src/js/libs/priority_03/**/*.js'],
+				dest: 'build/js/mCustomScrollbar.js',
 			},
-			jslib: {
-				src: ['src/js/libs/priority_01/**/*.js', 'src/js/libs/priority_02/**/*.js', 'src/js/libs/priority_03/**/*.js'],
-				dest: 'build/js/libs.js',
+			jsbootstrap: {
+				src: ['src/js/libs/priority_02/**/*.js'],
+				dest: 'build/js/bootstrap.js',
+			},
+			jsjquery: {
+				src: ['src/js/libs/priority_01/**/*.js'],
+				dest: 'build/js/jquery.js',
 			}
 		},
 
@@ -34,7 +46,8 @@ module.exports = function (grunt) {
 		sass: {
 			dist: {
 				files: {
-					'build/css/style.css': 'src/css/style.scss'
+					'build/css/style.css': 'src/css/style.scss',
+					'build/css/bootstrap.css': 'src/css/bootstrap.scss'
 				}
 			}
 		},
