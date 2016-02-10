@@ -55,17 +55,17 @@ $(document).ready(function() {
 	doc = $(document); 
 	$('#search').affix({
       offset: {
-        top: $('header').height()+$('.b-banner').height()
+        top: $('header').height()+$('.b-top-statistics').height()
       }
 	});	
 	$('#nav').affix({
       offset: {
-        top:  $('header').height()+$('.b-banner').height()
+        top:  $('header').height()+$('.b-top-statistics').height()
       }
 	});
 	$('#filtr').affix({
       offset: {
-        top:  $('header').height()+$('.b-banner').height()
+        top:  $('header').height()+$('.b-top-statistics').height()
       }
 	});
 	$('#head').affix({
@@ -75,7 +75,7 @@ $(document).ready(function() {
 	});
 	$('#submenu').affix({
       offset: {
-        top: $('header').height()+70
+        top: $('header').height()
       }
 	});
 	$('.js-scroll').mCustomScrollbar({
@@ -86,6 +86,43 @@ $(document).ready(function() {
 			});
 
 	$('.map').mapInit();
+
+	$('.b-time_list').slick({
+		  accessibility:false,
+		  draggable: false,
+		  infinite:true,
+		  touchMove: false,
+		  dots: false,
+		  cssEase: 'ease-in-out',
+		  easing: 'easeInOutCubic',
+		  speed: 1200,
+		  swipe:true,
+		  slidesToScroll: 1,
+		  slidesToShow: 6,
+		  responsive: [
+			  {
+			  breakpoint: 1040,
+			  settings: {
+				arrows: false,
+				slidesToShow: 4
+			  }
+			},
+			{
+			  breakpoint: 768,
+			  settings: {
+				arrows: false,
+				slidesToShow: 4
+			  }
+			},
+			{
+			  breakpoint: 750,
+			  settings: {
+				arrows: false,
+				slidesToShow: 2
+			  }
+			}
+		  ]
+	});
 }); //  document ready
 
 // maps page

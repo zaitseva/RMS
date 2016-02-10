@@ -17,8 +17,12 @@ module.exports = function (grunt) {
 				dest: 'src/css/style.scss',
 			},
 			scrollcss: {
-				src: ['src/css/common_ui/*.scss' ],
+				src: ['src/css/common_ui/_mCustomScrollbar.scss' ],
 				dest: 'src/css/_mCustomScrollbar.css',
+			},
+			slickcss: {
+				src: ['src/css/common_ui/_slick.scss' ],
+				dest: 'src/css/slick.css',
 			},
 			bootstrapcss: {
 				src: ['src/css/_bootstrap.scss'],
@@ -27,6 +31,10 @@ module.exports = function (grunt) {
 			js: {
 				src: ['src/js/script.js'],
 				dest: 'build/js/script.js',
+			},
+			jsslick: {
+				src: ['src/js/libs/priority_04/**/*.js'],
+				dest: 'build/js/slick.js',
 			},
 			jsscroll: {
 				src: ['src/js/libs/priority_03/**/*.js'],
