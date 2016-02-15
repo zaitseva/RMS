@@ -18,7 +18,7 @@ module.exports = function (grunt) {
 			},
 			scrollcss: {
 				src: ['src/css/common_ui/_mCustomScrollbar.scss' ],
-				dest: 'src/css/_mCustomScrollbar.css',
+				dest: 'src/css/mCustomScrollbar.css',
 			},
 			slickcss: {
 				src: ['src/css/common_ui/_slick.scss' ],

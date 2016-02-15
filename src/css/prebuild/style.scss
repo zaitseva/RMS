@@ -75,10 +75,7 @@ a:active, a:focus {
 	text-decoration: none;
 }
 a:hover {color:#111111; text-decoration: none;}
-/*
-Минимальная ширина - 320px, максимальная - 990px
-При ширине экрана более 990px содержимое страницы выравнивается по центру экрана.
-*/
+
 
 /*.b-header__nav-wrapper, footer, .b-content {
 	max-width: $max_width;
@@ -97,10 +94,7 @@ a:hover {color:#111111; text-decoration: none;}
 
 .nowrap { white-space: nowrap; }
 
-/*
-.d_table, .d_table_row, .d_table_cell
-отображение контейнеров в виде ячеек таблицы
-*/
+
 .d_table { display: table; width: 100%; }
 .d_table_row { display: table-row; }
 .d_table_cell { display: table-cell; vertical-align: middle; }
@@ -115,16 +109,15 @@ a:hover {color:#111111; text-decoration: none;}
 	.b-run_img {position:absolute; top:105px; left:-40px;}
 	.b-load_run {
 		display:inline-block; vertical-align:top; width:49%; padding:20px; 
-		img {margin-top:10px; transform: rotate(45deg);}
+		img {margin-top:10px;}
 		.circle {text-align:center; vertical-align:middle;border:5px solid #d5d5d7;transform: rotate(-45deg);  border-top:5px solid #6f57a5; border-radius:100%; height:55px; width:55px;}
 	}
 
 	.b-manrun {background:url('../images/flagman.png') no-repeat center -15px; position:relative; min-height:434px; margin-bottom:35px;
 	
 		.num {color:#00bbac; font-family: 'Conv_Vitesse-Bold',Sans-Serif; font-size:13px; line-height:17px;}
-		.circle {border-top:5px solid #d5d5d7; border:5px solid #00bbac; transform: rotate(45deg); }
+		.circle {border-top:5px solid #d5d5d7; border:5px solid #00bbac;  }
 		.b-load_run {
-		img {transform: rotate(-45deg);}
 		}
 	}
 	.b-womenrun {background:url('../images/flagwomen.png') no-repeat center -15px;position:relative;  min-height:434px; margin-bottom:35px;
@@ -136,9 +129,8 @@ a:hover {color:#111111; text-decoration: none;}
 		.b-load_run {display:block;width:100%; padding:0; }
 		.b-run_results {display:block;width:100%; padding:0; text-align:left; margin-top:10px;}
 		.num {color:#00bbac; font-family: 'Conv_Vitesse-Bold',Sans-Serif; font-size:13px; line-height:17px;}
-		.circle {border-top:5px solid #d5d5d7; border:5px solid #00bbac; transform: rotate(45deg); }
+		.circle {border-top:5px solid #d5d5d7; border:5px solid #00bbac;  }
 		.b-load_run {
-		img {transform: rotate(-45deg);}
 		}
 	}
 	.b-womenrun_mob {position:relative; border-left:1px solid #dbdbdb; padding:50px; background: linear-gradient(to bottom,  #e6e7e9 0%,#f9fafa 50%,#eceef2 100%);
@@ -272,12 +264,22 @@ a:hover {color:#111111; text-decoration: none;}
 	.b-search_autocomplete {position:absolute; top:70px; left:0;width:100%; z-index:999; background:#ffffff;
 		.b-check_autocomplete {background:#002664; padding:20px 0;color:#ffffff;box-shadow:inset 0px 0 1px 0 #32435f; font-size:12px; line-height:20px;font-family: 'Conv_Gotham-Medium'; text-transform:uppercase;}
 		.b-check {background:#ffffff; height:20px; width:20px; border-radius:3px; display:inline-block; vertical-align:top; margin:0 30px 0 50px;}
+		.b-searching
+{
+            padding: 20px;
+            font-family: 'Conv_Gotham-Medium';
+            font-size: 12px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: #959595;
+}
+
 		.js-scroll {max-height:320px; overflow:hidden;}
 		
 		.mCSB_inside > .mCSB_container {margin-right:0;}
 		.row {display:block; border-bottom:1px solid #dbdbdb;}
-		.col-md-9 {font-family: 'Conv_Gotham-Book',Sans-Serif; font-size:16px; line-height:20px;color:#9a9b9c; padding:20px; position:relative;
-			.name { font-family: 'Conv_Vitesse-Book',Sans-Serif; color:#4d4f53;font-size:18px; line-height:20px;}
+		.col-md-9 {font-family: 'Conv_Gotham-Book',Sans-Serif; font-size:12px; line-height:20px;color:#9a9b9c; padding:20px; position:relative;
+			.name { font-family: 'Conv_Vitesse-Book',Sans-Serif; color:#4d4f53;font-size:14px; line-height:20px;}
 			.view {display:none;position:absolute; right:20px; top:30px;font-size:12px; line-height:20px; color:#ffffff; text-align:right; font-family: 'Conv_Gotham-Medium';text-transform:uppercase; }
 		}
 		.col-md-3 {color:#4d4f53; background:#f5f5f7; box-shadow:inset 0px 1px 0 0 #e8e8eb; font-size:12px; line-height:20px; padding:30px 20px; text-align:right;font-family: 'Conv_Gotham-Medium';text-transform:uppercase;
@@ -298,6 +300,67 @@ a:hover {color:#111111; text-decoration: none;}
 
 
 }
+/* inserted 2 start */
+.highlight 
+{
+    font-weight: bold;
+}
+
+.angucomplete-dropdown 
+{
+	overflow-y: auto;
+    max-height: 320px;
+}
+
+/* inserted 2 end */
+/* updated start */
+        .b-search-form .b-search_autocomplete .row:hover
+        ,.b-search-form .b-search_autocomplete .row.selected
+        {
+            background: #002664;
+        }
+
+            .b-search-form .b-search_autocomplete .row:hover .col-md-9
+            ,.b-search-form .b-search_autocomplete .row.selected .col-md-9
+            {
+                color: #fff;
+                background: #002664;
+            }
+
+                .b-search-form .b-search_autocomplete .row:hover .col-md-9 .name
+                ,.b-search-form .b-search_autocomplete .row.selected .col-md-9 .name
+                {
+                    color: #fff;
+                }
+
+                .b-search-form .b-search_autocomplete .row:hover .col-md-9 .view
+                ,.b-search-form .b-search_autocomplete .row.selected .col-md-9 .view
+                {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+            .b-search-form .b-search_autocomplete .row:hover .col-md-3
+            ,.b-search-form .b-search_autocomplete .row.selected .col-md-3
+            {
+                color: #fff;
+                background: #3a7dda;
+            }
+
+                .b-search-form .b-search_autocomplete .row:hover .col-md-3 span
+                ,.b-search-form .b-search_autocomplete .row.selected .col-md-3 span
+                {
+                    display: none;
+                }
+
+                .b-search-form .b-search_autocomplete .row:hover .col-md-3 .goto
+                ,.b-search-form .b-search_autocomplete .row.selected .col-md-3 .goto
+                {
+                    display: block;
+                    text-align: left;
+                    background: #3a7dda;
+                }
+/* updated end */				
 
 .b-filtr_head	{
 	.row {box-shadow: 0px 20px 20px -20px rgba(5,10,29,0.5); border-bottom:1px solid #0c2439;  margin-bottom:20px;}
