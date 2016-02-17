@@ -553,8 +553,78 @@ background: linear-gradient(to bottom,  rgba(0,142,151,0.9) 0%,rgba(0,165,167,0.
 		.slick-next {background:url('../icons/arrow_right_slider.png') no-repeat 100% center; right:-25px; }
 		.slick-prev {background:url('../icons/arrow_left_slider.png') no-repeat 0 center; left:-25px; }
 }
+.b-runner_results_detailes{
+	.col {background:#ffffff;  box-shadow: 0 0 4px 1px rgba(5,10,29,0.2); padding:25px; margin:0 -8px 8px -8px;}
+	.name {color:#4d4f53; display:block; text-transform:uppercase; font-size:11px; margin-bottom:20px; font-family: 'Conv_Gotham-Medium',Sans-Serif;}
+	.results {font-family: 'Conv_Vitesse-Medium',Sans-Serif; color:#00b9aa; font-size:18px;}
+}
+.b-runner_results { margin-bottom:60px;
+	.b-nav_center {text-align:center;}
+	.nav {margin:0 auto; display:inline-block; vertical-align:top; }
+	.nav li {display:inline-block; vertical-align:top; border-left:1px solid #afb0b2;}
+	.nav li:first-child {border:0 none;}
+	.nav li a {color:#4d4f53; text-transform:uppercase; font-family: 'Conv_Gotham-Medium',Sans-Serif; font-size:11px; line-height:12px; padding:0 10px;}
+	.b-time_list .b-time_item .b-time_item_inner .distance {font-size:11px; color:#4d4f53;}
+	.b-time_list .b-time_item .b-time_item_inner .time {border-top:0 none;}
+	.b-time_list .b-time_item .b-time_item_inner .time:before {display:none;}
+	.b-time_list .b-time_item .b-time_item_inner .time span {border:0 none; padding:0;}
+	.close-result {display:block; height:85px;;background:#002664 url('../icons/close.png') no-repeat center center;}
+
+}
+.b-runner_results_active {
+	.row {display:block;  background:#ffffff;}
+	.col-md-9 {font-family: 'Conv_Gotham-Book',Sans-Serif; font-size:12px; line-height:20px;color:#9a9b9c; padding:22px 30px; position:relative; text-transform:uppercase;
+			.name { font-family: 'Conv_Vitesse-Bold',Sans-Serif; color:#4d4f53;font-size:14px; line-height:20px; text-transform:none;}
+		}
+	.col-md-2 { color:#4d4f53; background:#f5f5f7; box-shadow:inset 1px 0 13px 0 #e8e8eb; font-size:12px; line-height:20px; padding:32px 30px; text-align:center;font-family: 'Conv_Gotham-Medium';text-transform:uppercase;}
+}
+.b-runner_info {
+	margin-bottom:15px;
+	background: linear-gradient(to bottom,  rgba(0,142,151,1) 0%,rgba(0,165,167,1) 23%,rgba(0,187,172,1) 68%,rgba(1,196,180,1) 100%); 
+	color:#ffffff; font-family: 'Conv_Gotham-Medium',Sans-Serif; font-size:14px; line-height:20px;
+	span.tit { font-family: 'Conv_Gotham-Book',Sans-Serif; text-transform:uppercase; font-size:11px; display:block;}
+	.short-name {display:none;}
+	.b-screen {background:url('../icons/ic-screen.png') no-repeat center center; display:block; height:40px; width:100%;}
+	.b-social {background:url('../icons/social_white.png') no-repeat center center; display:block; height:40px; }
+	.col-md-1 {border-left:1px solid #019c9d; padding:20px;}
+	.col-md-2 { padding:20px;}
+	.col-md-7 { padding:20px; border-left:1px solid #019c9d;}
+	.col-md-1:first-child  {border:0 none;}
+}
+.b-runners_detailes-list {width:100%;  position:relative;  margin-bottom:20px;    box-shadow: 0 0 4px 1px rgba(5,10,29,0.2);
+
+		.row {display:block; border-bottom:3px solid #dbdbdb; background:#ffffff;}
+		.col-md-9 {font-family: 'Conv_Gotham-Book',Sans-Serif; font-size:12px; line-height:20px;color:#9a9b9c; padding:20px; position:relative; text-transform:uppercase;
+			.name { font-family: 'Conv_Vitesse-Book',Sans-Serif; color:#4d4f53;font-size:14px; line-height:20px; text-transform:none;}
+			.details {color:#4d4f53;font-family: 'Conv_Gotham-Medium',Sans-Serif; font-size:12px; line-height:12px; margin-top:5px;
+				.item { display:inline-block; vertical-align:top; text-transform:uppercase; padding:0 10px; border-left:1px solid #dbdbdb;}
+				.item:first-child {border:0 none; padding-left:0;}
+				.num {font-family: 'Conv_Gotham-Bold',Sans-Serif; margin-left:5px;}
+				.f-male {color:#00bbac;}
+			}
+			.view {display:none;position:absolute; right:20px; top:40px;font-size:12px; line-height:20px; color:#ffffff; text-align:right; font-family: 'Conv_Gotham-Medium';text-transform:uppercase; }
+		}
+		.col-md-3 { color:#4d4f53; background:#f5f5f7; box-shadow:inset 1px 0 13px 0 #e8e8eb; font-size:12px; line-height:20px; padding:40px 20px; text-align:center;font-family: 'Conv_Gotham-Medium';text-transform:uppercase;
+			.openDown {display:none; text-transform:uppercase;}
+			.openDown:after {content:''; display:inline-block; vertical-align:top; float:right; height:10px; width:20px;background:url('../icons/arrow_down.png') no-repeat 0 center;}
+
+		}
+		.row:hover {background:#002664;}
+		.row:hover .col-md-9 {background:#002664;color:#ffffff; 
+			.name {color:#ffffff;}
+			.details {color:#ffffff;
+				.item {border-color:#ffffff;}
+				.f-male {color:#ffffff;}
+			}
+			.view {display:inline-block; vertical-align:top;}
+		}
+		.row:hover .col-md-3 {background:#3a7dda;color:#ffffff; box-shadow:none;
+			span {display:none;}
+			.openDown {display:block; text-align:left; background:#3a7dda;}	
+	}
 
 
+}
 @media (min-width: 768px) and (max-width: 991px) {
 	.col-md-4  {border-top:1px solid #011639;}
 }
@@ -571,6 +641,10 @@ background: linear-gradient(to bottom,  rgba(0,142,151,0.9) 0%,rgba(0,165,167,0.
 @media screen and (max-width: 990px) {
 	.b-top-statistics .b-run_img {width:100%; left:0; bottom:-105px; top:auto; height:auto;}
 	.b-top-statistics .b-womenrun .b-run_img { bottom:-105px; top:auto;}
+	.b-runner_results_detailes .results {display:inline-block; vertical-align:top; width:45%; text-align:right;}
+	.b-runner_results_detailes .name {display:inline-block; vertical-align:top; width:53%;}
+	.b-runner_results_detailes .col {margin-bottom:3px;}
+
 }
 @media screen and (max-width: 768px) {
 	.col-md-4  {border-top:1px solid #011639;}
@@ -603,7 +677,6 @@ background: linear-gradient(to bottom,  rgba(0,142,151,0.9) 0%,rgba(0,165,167,0.
 		}
 
 
-
 }
 @media screen and (max-width: 480px) {
 .b-top-statistics .b-womenrun_mob, .b-top-statistics .b-manrun_mob {padding:20px;}
@@ -616,6 +689,10 @@ background: linear-gradient(to bottom,  rgba(0,142,151,0.9) 0%,rgba(0,165,167,0.
 	.b-search-form  .b-search_autocomplete .row:hover .col-md-9 {
 			.view {display:none;}
 		}
-
+			.b-runner_info  .short-name {display:block;}
+			.b-runner_info  .long-name {display:none;}
+.b-runners_detailes-list .col-md-9 .details .num {display:block; margin-left:0; padding-top:5px;}
+.b-runners_detailes-list .col-md-3 {padding:47px 20px;}
+.b-runners_detailes-list .row:hover .col-md-9 .view {display:none;}
 }
 

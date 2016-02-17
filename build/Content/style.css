@@ -1636,6 +1636,281 @@ footer .col-md-7 img {
 	background: url('../Content/images/arrow_left_slider.png') no-repeat 0 center;
 }
 
+.b-runner_results_detailes .col {
+	margin: 0 -8px 8px -8px; 
+	padding: 25px;
+	background: #fff;
+	-webkit-box-shadow: 0 0 4px 1px rgba(5, 10, 29, .2);
+	        box-shadow: 0 0 4px 1px rgba(5, 10, 29, .2);
+}
+.b-runner_results_detailes .name {
+	margin-bottom: 20px;
+	display: block;
+	font-family: 'Conv_Gotham-Medium',Sans-Serif; 
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #4d4f53;
+}
+.b-runner_results_detailes .results {
+	font-family: 'Conv_Vitesse-Medium',Sans-Serif;
+	font-size: 18px; 
+	color: #00b9aa;
+}
+
+.b-runner_results {
+	margin-bottom: 60px;
+}
+.b-runner_results .b-nav_center {
+	text-align: center;
+}
+.b-runner_results .nav {
+	margin: 0 auto;
+	display: inline-block;
+	vertical-align: top;
+}
+.b-runner_results .nav li {
+	display: inline-block;
+	vertical-align: top;
+	border-left: 1px solid #afb0b2;
+}
+.b-runner_results .nav li:first-child {
+	border: 0 none;
+}
+.b-runner_results .nav li a {
+	padding: 0 10px; 
+	font-family: 'Conv_Gotham-Medium',Sans-Serif;
+	font-size: 11px;
+	line-height: 12px;
+	text-transform: uppercase;
+	color: #4d4f53;
+}
+.b-runner_results .b-time_list .b-time_item .b-time_item_inner .distance {
+	font-size: 11px;
+	color: #4d4f53;
+}
+.b-runner_results .b-time_list .b-time_item .b-time_item_inner .time {
+	border-top: 0 none;
+}
+.b-runner_results .b-time_list .b-time_item .b-time_item_inner .time:before {
+	display: none;
+}
+.b-runner_results .b-time_list .b-time_item .b-time_item_inner .time span {
+	padding: 0; 
+	border: 0 none;
+}
+.b-runner_results .close-result {
+	display: block;
+	height: 85px;
+	background: #002664 url('../Content/images/close.png') no-repeat center center;
+}
+
+.b-runner_results_active .row {
+	display: block;
+	background: #fff;
+}
+.b-runner_results_active .col-md-9 {
+	position: relative;
+	padding: 22px 30px;
+	font-family: 'Conv_Gotham-Book',Sans-Serif;
+	font-size: 12px;
+	line-height: 20px;
+	text-transform: uppercase; 
+	color: #9a9b9c;
+}
+.b-runner_results_active .col-md-9 .name {
+	font-family: 'Conv_Vitesse-Bold',Sans-Serif;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: none; 
+	color: #4d4f53;
+}
+.b-runner_results_active .col-md-2 {
+	padding: 32px 30px;
+	font-family: 'Conv_Gotham-Medium';
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase; 
+	color: #4d4f53;
+	background: #f5f5f7;
+	-webkit-box-shadow: inset 1px 0 13px 0 #e8e8eb;
+	        box-shadow: inset 1px 0 13px 0 #e8e8eb;
+}
+
+.b-runner_info {
+	margin-bottom: 15px;
+	font-family: 'Conv_Gotham-Medium',Sans-Serif;
+	font-size: 14px;
+	line-height: 20px; 
+	color: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#008e97), color-stop(23%, #00a5a7), color-stop(68%, #00bbac), to(#01c4b4));
+	background: -webkit-linear-gradient(top, #008e97 0%, #00a5a7 23%, #00bbac 68%, #01c4b4 100%);
+	background:      -o-linear-gradient(top, #008e97 0%, #00a5a7 23%, #00bbac 68%, #01c4b4 100%);
+	background:         linear-gradient(to bottom, #008e97 0%, #00a5a7 23%, #00bbac 68%, #01c4b4 100%);
+}
+.b-runner_info span.tit {
+	display: block; 
+	font-family: 'Conv_Gotham-Book',Sans-Serif;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+.b-runner_info .short-name {
+	display: none;
+}
+.b-runner_info .b-screen {
+	display: block;
+	width: 100%; 
+	height: 40px;
+	background: url('../Content/images/ic-screen.png') no-repeat center center;
+}
+.b-runner_info .b-social {
+	display: block;
+	height: 40px; 
+	background: url('../Content/images/social_white.png') no-repeat center center;
+}
+.b-runner_info .col-md-1 {
+	padding: 20px; 
+	border-left: 1px solid #019c9d;
+}
+.b-runner_info .col-md-2 {
+	padding: 20px;
+}
+.b-runner_info .col-md-7 {
+	padding: 20px;
+	border-left: 1px solid #019c9d;
+}
+.b-runner_info .col-md-1:first-child {
+	border: 0 none;
+}
+
+.b-runners_detailes-list {
+	position: relative;
+	margin-bottom: 20px;
+	width: 100%;
+	-webkit-box-shadow: 0 0 4px 1px rgba(5, 10, 29, .2);
+	        box-shadow: 0 0 4px 1px rgba(5, 10, 29, .2);
+}
+.b-runners_detailes-list .row {
+	display: block;
+	background: #fff; 
+	border-bottom: 3px solid #dbdbdb;
+}
+.b-runners_detailes-list .col-md-9 {
+	position: relative;
+	padding: 20px;
+	font-family: 'Conv_Gotham-Book',Sans-Serif;
+	font-size: 12px;
+	line-height: 20px;
+	text-transform: uppercase; 
+	color: #9a9b9c;
+}
+.b-runners_detailes-list .col-md-9 .name {
+	font-family: 'Conv_Vitesse-Book',Sans-Serif;
+	font-size: 14px;
+	line-height: 20px;
+	text-transform: none; 
+	color: #4d4f53;
+}
+.b-runners_detailes-list .col-md-9 .details {
+	margin-top: 5px; 
+	font-family: 'Conv_Gotham-Medium',Sans-Serif;
+	font-size: 12px;
+	line-height: 12px;
+	color: #4d4f53;
+}
+.b-runners_detailes-list .col-md-9 .details .item {
+	padding: 0 10px;
+	display: inline-block;
+	vertical-align: top;
+	text-transform: uppercase;
+	border-left: 1px solid #dbdbdb;
+}
+.b-runners_detailes-list .col-md-9 .details .item:first-child {
+	padding-left: 0; 
+	border: 0 none;
+}
+.b-runners_detailes-list .col-md-9 .details .num {
+	margin-left: 5px; 
+	font-family: 'Conv_Gotham-Bold',Sans-Serif;
+}
+.b-runners_detailes-list .col-md-9 .details .f-male {
+	color: #00bbac;
+}
+.b-runners_detailes-list .col-md-9 .view {
+	position: absolute;
+	top: 40px;
+	right: 20px;
+	display: none;
+	font-family: 'Conv_Gotham-Medium';
+	font-size: 12px;
+	line-height: 20px;
+	text-align: right;
+	text-transform: uppercase; 
+	color: #fff;
+}
+.b-runners_detailes-list .col-md-3 {
+	padding: 40px 20px;
+	font-family: 'Conv_Gotham-Medium';
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase; 
+	color: #4d4f53;
+	background: #f5f5f7;
+	-webkit-box-shadow: inset 1px 0 13px 0 #e8e8eb;
+	        box-shadow: inset 1px 0 13px 0 #e8e8eb;
+}
+.b-runners_detailes-list .col-md-3 .openDown {
+	display: none;
+	text-transform: uppercase;
+}
+.b-runners_detailes-list .col-md-3 .openDown:after {
+	display: inline-block;
+	float: right;
+	width: 20px;
+	height: 10px;
+	content: '';
+	vertical-align: top;
+	background: url('../Content/images/arrow_down.png') no-repeat 0 center;
+}
+.b-runners_detailes-list .row:hover {
+	background: #002664;
+}
+.b-runners_detailes-list .row:hover .col-md-9 {
+	color: #fff; 
+	background: #002664;
+}
+.b-runners_detailes-list .row:hover .col-md-9 .name {
+	color: #fff;
+}
+.b-runners_detailes-list .row:hover .col-md-9 .details {
+	color: #fff;
+}
+.b-runners_detailes-list .row:hover .col-md-9 .details .item {
+	border-color: #fff;
+}
+.b-runners_detailes-list .row:hover .col-md-9 .details .f-male {
+	color: #fff;
+}
+.b-runners_detailes-list .row:hover .col-md-9 .view {
+	display: inline-block;
+	vertical-align: top;
+}
+.b-runners_detailes-list .row:hover .col-md-3 {
+	color: #fff;
+	background: #3a7dda;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+.b-runners_detailes-list .row:hover .col-md-3 span {
+	display: none;
+}
+.b-runners_detailes-list .row:hover .col-md-3 .openDown {
+	display: block;
+	text-align: left;
+	background: #3a7dda;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
 	.col-md-4 {
 		border-top: 1px solid #011639;
@@ -1660,6 +1935,20 @@ footer .col-md-7 img {
 	.b-top-statistics .b-womenrun .b-run_img {
 		top: auto; 
 		bottom: -105px;
+	}
+	.b-runner_results_detailes .results {
+		display: inline-block;
+		width: 45%;
+		text-align: right; 
+		vertical-align: top;
+	}
+	.b-runner_results_detailes .name {
+		display: inline-block;
+		width: 53%; 
+		vertical-align: top;
+	}
+	.b-runner_results_detailes .col {
+		margin-bottom: 3px;
 	}
 }
 
@@ -1755,6 +2044,23 @@ footer .col-md-7 img {
 		padding: 10px;
 	}
 	.b-search-form .b-search_autocomplete .row:hover .col-md-9 .view {
+		display: none;
+	}
+	.b-runner_info .short-name {
+		display: block;
+	}
+	.b-runner_info .long-name {
+		display: none;
+	}
+	.b-runners_detailes-list .col-md-9 .details .num {
+		margin-left: 0;
+		padding-top: 5px; 
+		display: block;
+	}
+	.b-runners_detailes-list .col-md-3 {
+		padding: 47px 20px;
+	}
+	.b-runners_detailes-list .row:hover .col-md-9 .view {
 		display: none;
 	}
 }
