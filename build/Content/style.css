@@ -172,10 +172,6 @@ a:hover {
 	border-top: 5px solid #6f57a5;
 	-webkit-border-radius: 100%;
 	        border-radius: 100%;
-	-webkit-transform: rotate(-45deg);
-	    -ms-transform: rotate(-45deg);
-	     -o-transform: rotate(-45deg);
-	        transform: rotate(-45deg);
 }
 .b-top-statistics .b-manrun {
 	position: relative;
@@ -746,32 +742,6 @@ a:hover {
 	content: '';
 	vertical-align: top;
 	background: url('../Content/images/arrow_right_02.png') no-repeat 0 center;
-}
-.b-search-form .b-search_autocomplete .row:hover {
-	background: #002664;
-}
-.b-search-form .b-search_autocomplete .row:hover .col-md-9 {
-	color: #fff; 
-	background: #002664;
-}
-.b-search-form .b-search_autocomplete .row:hover .col-md-9 .name {
-	color: #fff;
-}
-.b-search-form .b-search_autocomplete .row:hover .col-md-9 .view {
-	display: inline-block;
-	vertical-align: top;
-}
-.b-search-form .b-search_autocomplete .row:hover .col-md-3 {
-	color: #fff; 
-	background: #3a7dda;
-}
-.b-search-form .b-search_autocomplete .row:hover .col-md-3 span {
-	display: none;
-}
-.b-search-form .b-search_autocomplete .row:hover .col-md-3 .goto {
-	display: block;
-	text-align: left;
-	background: #3a7dda;
 }
 
 /* inserted 2 start */

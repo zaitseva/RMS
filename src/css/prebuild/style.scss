@@ -110,7 +110,7 @@ a:hover {color:#111111; text-decoration: none;}
 	.b-load_run {
 		display:inline-block; vertical-align:top; width:49%; padding:20px; 
 		img {margin-top:10px;}
-		.circle {text-align:center; vertical-align:middle;border:5px solid #d5d5d7;transform: rotate(-45deg);  border-top:5px solid #6f57a5; border-radius:100%; height:55px; width:55px;}
+		.circle {text-align:center; vertical-align:middle;border:5px solid #d5d5d7;  border-top:5px solid #6f57a5; border-radius:100%; height:55px; width:55px;}
 	}
 
 	.b-manrun {background:url('../images/flagman.png') no-repeat center -15px; position:relative; min-height:434px; margin-bottom:35px;
@@ -287,15 +287,7 @@ a:hover {color:#111111; text-decoration: none;}
 			.goto:after {content:''; display:inline-block; vertical-align:top; float:right; height:20px; width:10px;background:url('../icons/arrow_right_02.png') no-repeat 0 center;}
 
 		}
-		.row:hover {background:#002664;}
-		.row:hover .col-md-9 {background:#002664;color:#ffffff; 
-			.name {color:#ffffff;}
-			.view {display:inline-block; vertical-align:top;}
-		}
-		.row:hover .col-md-3 {background:#3a7dda;color:#ffffff; 
-			span {display:none;}
-			.goto {display:block; text-align:left; background:#3a7dda;}
-		}
+		
 	}
 
 
