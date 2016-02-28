@@ -271,7 +271,7 @@ a:hover {
 	line-height: 13px;
 	vertical-align: top;
 	text-transform: uppercase;
-	color: #4d4f53;
+	color: #717171;
 }
 .b-top-statistics .b-main_sec {
 	text-align: center;
@@ -704,7 +704,7 @@ a:hover {
 	font-family: 'Conv_Vitesse-Book',Sans-Serif;
 	font-size: 14px;
 	line-height: 20px; 
-	color: #4d4f53;
+	color: #717171;
 }
 .b-search-form .b-search_autocomplete .col-md-9 .view {
 	position: absolute;
@@ -725,7 +725,7 @@ a:hover {
 	line-height: 20px;
 	text-align: right;
 	text-transform: uppercase; 
-	color: #4d4f53;
+	color: #717171;
 	background: #f5f5f7;
 	-webkit-box-shadow: inset 0 1px 0 0 #e8e8eb;
 	        box-shadow: inset 0 1px 0 0 #e8e8eb;
@@ -1153,6 +1153,9 @@ footer .col-md-7 img {
 	line-height: 20px; 
 	color: #57585a;
 }
+.b-title h3 .num {
+	font-family: 'Conv_Vitesse-Book',Sans-Serif;
+}
 .b-title .b-sec_man:before {
 	margin-top: 6px; 
 	margin-right: 5px;
@@ -1180,7 +1183,7 @@ footer .col-md-7 img {
 	font-family: 'Conv_Gotham-Medium',Sans-Serif;
 	font-size: 11px; 
 	text-transform: uppercase;
-	color: #4d4f53;
+	color: #717171;
 }
 .b-title .b-link_all span {
 	margin-left: 5px;
@@ -1209,7 +1212,7 @@ footer .col-md-7 img {
 	font-family: 'Conv_Gotham-Medium',Sans-Serif;
 	font-size: 12px;
 	text-transform: uppercase; 
-	color: #4d4f53;
+	color: #717171;
 }
 .b-statistic .b-stat_line {
 	margin: 10px 0; 
@@ -1298,7 +1301,7 @@ footer .col-md-7 img {
 	height: 117px;
 	text-align: center;
 	vertical-align: bottom;
-	color: #4d4f53;
+	color: #717171;
 	background: url('../Content/images/bg-boros.png') no-repeat center center;
 	background-color: #fff;
 }
@@ -1324,7 +1327,7 @@ footer .col-md-7 img {
 }
 .b-statistic .b-persent .num {
 	font-family: 'Conv_Vitesse-Bold',Sans-Serif;
-	color: #4d4f53;
+	color: #717171;
 }
 .b-statistic hr {
 	position: relative;
@@ -1467,7 +1470,7 @@ footer .col-md-7 img {
 	font-family: 'Conv_Gotham-Medium',Sans-Serif;
 	font-size: 12px;
 	text-transform: uppercase;
-	color: #4d4f53;
+	color: #717171;
 	border-bottom: 1px solid #dbdbdb;
 	border-left: 1px solid #dbdbdb;
 }
@@ -1619,7 +1622,7 @@ footer .col-md-7 img {
 	font-family: 'Conv_Gotham-Medium',Sans-Serif; 
 	font-size: 11px;
 	text-transform: uppercase;
-	color: #4d4f53;
+	color: #717171;
 }
 .b-runner_results_detailes .results {
 	font-family: 'Conv_Vitesse-Medium',Sans-Serif;
@@ -1652,11 +1655,11 @@ footer .col-md-7 img {
 	font-size: 11px;
 	line-height: 12px;
 	text-transform: uppercase;
-	color: #4d4f53;
+	color: #717171;
 }
 .b-runner_results .b-time_list .b-time_item .b-time_item_inner .distance {
 	font-size: 11px;
-	color: #4d4f53;
+	color: #717171;
 }
 .b-runner_results .b-time_list .b-time_item .b-time_item_inner .time {
 	border-top: 0 none;
@@ -1692,7 +1695,7 @@ footer .col-md-7 img {
 	font-size: 14px;
 	line-height: 20px;
 	text-transform: none; 
-	color: #4d4f53;
+	color: #717171;
 }
 .b-runner_results_active .col-md-2 {
 	padding: 32px 30px;
@@ -1701,10 +1704,36 @@ footer .col-md-7 img {
 	line-height: 20px;
 	text-align: center;
 	text-transform: uppercase; 
-	color: #4d4f53;
+	color: #717171;
 	background: #f5f5f7;
 	-webkit-box-shadow: inset 1px 0 13px 0 #e8e8eb;
 	        box-shadow: inset 1px 0 13px 0 #e8e8eb;
+}
+
+.b-runner_info-award.b-runner_info {
+	margin-bottom: 0; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#2a5ea6), color-stop(64%, #3a7dda), to(#3a7dda));
+	background: -webkit-linear-gradient(top, #2a5ea6 0%, #3a7dda 64%, #3a7dda 100%);
+	background:      -o-linear-gradient(top, #2a5ea6 0%, #3a7dda 64%, #3a7dda 100%);
+	background:         linear-gradient(to bottom, #2a5ea6 0%, #3a7dda 64%, #3a7dda 100%);
+}
+.b-runner_info-award.b-runner_info .col-md-2 {
+	padding: 20px;
+	padding: 20px; 
+	border-left: 1px solid #2a5ea6;
+}
+.b-runner_info-award.b-runner_info .col-md-6 {
+	padding: 20px;
+	border-left: 1px solid #2a5ea6;
+}
+.b-runner_info-award.b-runner_info .col-md-2:first-child {
+	border: 0 none;
+}
+.b-runner_info-award.b-runner_info .col-md-1 {
+	border-left: 0 none;
+}
+.b-runner_info-award.b-runner_info .col-md-1:last-child {
+	border-left: 1px solid #2a5ea6;
 }
 
 .b-runner_info {
@@ -1725,6 +1754,9 @@ footer .col-md-7 img {
 	text-transform: uppercase;
 }
 .b-runner_info .short-name {
+	display: none;
+}
+.b-runner_info span.tit.short-name {
 	display: none;
 }
 .b-runner_info .b-screen {
@@ -1755,15 +1787,16 @@ footer .col-md-7 img {
 
 .b-runners_detailes-list {
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 20px; 
 	width: 100%;
-	-webkit-box-shadow: 0 0 4px 1px rgba(5, 10, 29, .2);
-	        box-shadow: 0 0 4px 1px rgba(5, 10, 29, .2);
 }
 .b-runners_detailes-list .row {
 	display: block;
 	background: #fff; 
-	border-bottom: 3px solid #dbdbdb;
+	border-top: 3px solid #f1f1f1;
+}
+.b-runners_detailes-list .row:first-child {
+	border-top: 0 none;
 }
 .b-runners_detailes-list .col-md-9 {
 	position: relative;
@@ -1779,14 +1812,14 @@ footer .col-md-7 img {
 	font-size: 14px;
 	line-height: 20px;
 	text-transform: none; 
-	color: #4d4f53;
+	color: #717171;
 }
 .b-runners_detailes-list .col-md-9 .details {
 	margin-top: 5px; 
 	font-family: 'Conv_Gotham-Medium',Sans-Serif;
 	font-size: 12px;
 	line-height: 12px;
-	color: #4d4f53;
+	color: #717171;
 }
 .b-runners_detailes-list .col-md-9 .details .item {
 	padding: 0 10px;
@@ -1800,8 +1833,9 @@ footer .col-md-7 img {
 	border: 0 none;
 }
 .b-runners_detailes-list .col-md-9 .details .num {
-	margin-left: 5px; 
+	margin-left: 5px;
 	font-family: 'Conv_Gotham-Bold',Sans-Serif;
+	color: #9a9b9c;
 }
 .b-runners_detailes-list .col-md-9 .details .f-male {
 	color: #00bbac;
@@ -1825,10 +1859,10 @@ footer .col-md-7 img {
 	line-height: 20px;
 	text-align: center;
 	text-transform: uppercase; 
-	color: #4d4f53;
+	color: #717171;
 	background: #f5f5f7;
-	-webkit-box-shadow: inset 1px 0 13px 0 #e8e8eb;
-	        box-shadow: inset 1px 0 13px 0 #e8e8eb;
+	-webkit-box-shadow: inset 6px 0 6px -3px #e8e8eb;
+	        box-shadow: inset 6px 0 6px -3px #e8e8eb;
 }
 .b-runners_detailes-list .col-md-3 .openDown {
 	display: none;
@@ -1858,6 +1892,9 @@ footer .col-md-7 img {
 }
 .b-runners_detailes-list .row:hover .col-md-9 .details .item {
 	border-color: #fff;
+}
+.b-runners_detailes-list .row:hover .col-md-9 .details .num {
+	color: #fff;
 }
 .b-runners_detailes-list .row:hover .col-md-9 .details .f-male {
 	color: #fff;
@@ -1903,7 +1940,7 @@ footer .col-md-7 img {
 	font-family: 'Conv_Gotham-Medium',Sans-Serif;
 	font-size: 12px;
 	text-transform: uppercase;
-	color: #4d4f53;
+	color: #717171;
 	background: #fff;
 }
 
@@ -1921,7 +1958,7 @@ footer .col-md-7 img {
 	font-family: 'Conv_Vitesse-Medium',Sans-Serif;
 	font-size: 14px;
 	text-transform: uppercase;
-	color: #4d4f53;
+	color: #717171;
 	background: #f8f9fb;
 }
 .tb-body td:first-child {
@@ -1938,7 +1975,7 @@ footer .col-md-7 img {
 	font-size: 10px;
 	text-align: right;
 	text-transform: uppercase;
-	color: #4d4f53;
+	color: #717171;
 	background: #f8f9fb;
 }
 .tb-body td span.f_m {
@@ -2009,7 +2046,7 @@ footer .col-md-7 img {
 	font-family: 'Conv_Gotham-Medium',Sans-Serif; 
 	font-size: 12px;
 	text-transform: uppercase;
-	color: #4d4f53;
+	color: #717171;
 }
 .b-total_finisher-stat .col span {
 	font-size: 11px; 
@@ -2080,6 +2117,164 @@ footer .col-md-7 img {
 	margin-bottom: 8px;
 }
 
+.winners_tb {
+	margin-bottom: 25px; 
+	width: 100%;
+}
+.winners_tb tr th {
+	padding: 10px 25px;
+	font-family: 'Conv_Gotham-Medium',Sans-Serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: left;
+	text-transform: uppercase;
+	color: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#001333), color-stop(64%, #002664), to(#002664));
+	background: -webkit-linear-gradient(top, #001333 0%, #002664 64%, #002664 100%);
+	background:      -o-linear-gradient(top, #001333 0%, #002664 64%, #002664 100%);
+	background:         linear-gradient(to bottom, #001333 0%, #002664 64%, #002664 100%); 
+	border-left: 1px solid #000e24;
+}
+.winners_tb tr th.age {
+	width: 53px;
+}
+.winners_tb tr th:first-child {
+	border: 0 none;
+}
+.winners_tb tr td {
+	padding: 0 4px; 
+	border-bottom: 1px solid #dbdbdb;
+}
+.winners_tb tr td:first-child {
+	padding: 0 4px 0 0;
+}
+.winners_tb tr td:last-child {
+	padding: 0 0 0 4px;
+}
+.winners_tb tr td span {
+	padding: 20px;
+	display: block;
+	height: 100%;
+	font-family: 'Conv_Vitesse-Medium',Sans-Serif;
+	font-size: 12px;
+	text-align: left;
+	color: #717171;
+	background: #fafbfc;
+	-webkit-box-shadow: 0 0 4px 1px rgba(213, 213, 213, .35);
+	        box-shadow: 0 0 4px 1px rgba(213, 213, 213, .35);
+}
+.winners_tb tr td .name {
+	margin-right: 5px;
+	padding: 20px;
+	font-family: 'Conv_Vitesse-Book',Sans-Serif;
+	font-size: 14px;
+	text-align: left;
+	color: #717171;
+	background: #fafbfc;
+	background: #fafbfc;
+	-webkit-box-shadow: 0 0 4px 1px rgba(213, 213, 213, .35);
+	        box-shadow: 0 0 4px 1px rgba(213, 213, 213, .35);
+}
+.winners_tb tr td a.goto {
+	padding: 20px;
+	display: none;
+	font-family: 'Conv_Vitesse-Medium',Sans-Serif; 
+	font-size: 11px;
+	text-align: right;
+	text-transform: uppercase;
+	color: #fff;
+}
+.winners_tb tr td .social {
+	padding: 20px; 
+	display: none;
+	background: #3a7dda;
+}
+.winners_tb tr td .name span {
+	display: none;
+}
+.winners_tb tr.f_m td .name {
+	border-left: 7px solid #00bbac;
+}
+.winners_tb tr.f_m td .age {
+	color: #00bbac;
+}
+.winners_tb tr.f_w td .name {
+	border-left: 7px solid #6f57a5;
+}
+.winners_tb tr.f_w td .age {
+	color: #6f57a5;
+}
+.winners_tb td .social a {
+	margin: 0 3px;
+}
+.winners_tb tr:hover {
+	background: #002664;
+}
+.winners_tb tr:hover td {
+	color: #fff; 
+	background: #002664;
+}
+.winners_tb tr:hover td span {
+	display: none;
+}
+.winners_tb tr:hover td .name {
+	color: #fff;
+	background: #002664;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+.winners_tb tr:hover td .name {
+	border-left: 7px solid #002664;
+}
+.winners_tb tr:hover td:first-child {
+	border-left: 0 none;
+}
+.winners_tb tr:hover td a.goto {
+	display: block;
+	border-left: 1px solid #000e24;
+}
+.winners_tb tr:hover td .social {
+	display: block;
+	border-left: 1px solid #000e24;
+}
+
+.b-sort {
+	font-family: 'Conv_Gotham-Medium',Sans-Serif;
+	font-size: 11px;
+	line-height: 34px;
+	text-transform: uppercase; 
+	-webkit-box-shadow: inset 0 20px 20px -20px rgba(223, 225, 232, .5);
+	        box-shadow: inset 0 20px 20px -20px rgba(223, 225, 232, .5);
+}
+.b-sort .col-md-3 {
+	border-left: 1px solid #d4d4d5;
+}
+.b-sort a {
+	color: #58585a;
+}
+.b-sort a span {
+	position: relative; 
+	display: block;
+}
+.b-sort a.down span:after {
+	display: inline-block;
+	float: right;
+	width: 20px;
+	height: 34px;
+	content: '';
+	vertical-align: top;
+	background: url('../Content/images/arrow_down_grey.png') no-repeat 0 center;
+}
+.b-sort a.up span:after {
+	display: inline-block;
+	float: right;
+	width: 20px;
+	height: 34px;
+	content: '';
+	vertical-align: top;
+	background: url('../Content/images/arrow_up_grey.png') no-repeat 0 center;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
 	.col-md-4 {
 		border-top: 1px solid #011639;
@@ -2147,8 +2342,16 @@ footer .col-md-7 img {
 		display: block;
 	}
 	.b-head h1 {
-		max-width: 100%; 
+		margin: 10px 0 20px 0; 
+		padding: 0 10px;
+		max-width: 100%;
 		font-size: 21px;
+	}
+	.b-head p {
+		padding: 0 10px;
+	}
+	.b-head_topline .b-slog {
+		background-position: 5px center;
 	}
 	.b-top-statistics .b-womenrun_mob,
 	.b-top-statistics .b-manrun_mob {
@@ -2195,6 +2398,62 @@ footer .col-md-7 img {
 	.b-search-form .b-search_autocomplete .row:hover .col-md-9 .view {
 		display: none;
 	}
+	.winners_tb tr th {
+		display: none;
+	}
+	.winners_tb tr th:first-child {
+		display: table-cell;
+		width: 70%;
+	}
+	.winners_tb tr th:last-child {
+		display: table-cell;
+		width: 30%;
+	}
+	.winners_tb tr td {
+		display: none;
+	}
+	.winners_tb tr td:first-child {
+		padding: 0; 
+		display: table-cell;
+		width: 70%;
+	}
+	.winners_tb tr td:last-child {
+		padding: 20px;
+		display: table-cell;
+		width: 30%;
+		text-align: center;
+		background: #f5f5f7;
+		-webkit-box-shadow: inset 6px 0 6px -3px #e8e8eb;
+		        box-shadow: inset 6px 0 6px -3px #e8e8eb;
+	}
+	.winners_tb tr td .name {
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+	}
+	.winners_tb tr td .name div {
+		margin-top: 5px;
+	}
+	.winners_tb tr td .name span {
+		padding: 0 5px;
+		display: inline-block;
+		vertical-align: top;
+		background: none; 
+		border-left: 1px solid #dbdbdb;
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+	}
+	.winners_tb tr td .name span:first-child {
+		border-left: 0 none;
+	}
+	.winners_tb tr td:last-child span {
+		padding: 0;
+		background: none; 
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+	}
+	.winners_tb tr:hover td:last-child {
+		padding: 0;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -2219,6 +2478,9 @@ footer .col-md-7 img {
 		display: none;
 	}
 	.b-runner_info .short-name {
+		display: block;
+	}
+	.b-runner_info span.tit.short-name {
 		display: block;
 	}
 	.b-runner_info .long-name {
