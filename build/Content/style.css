@@ -2350,7 +2350,7 @@ footer .col-md-7 img {
 	color: #fff;
 	background: #002665;
 }
-.b-compare .filtr .b-lead_box {
+.b-compare .filtr .b-ic_lead_box {
 	padding: 15px 20px 15px 0;
 	display: block;
 	font-family: 'Conv_Gotham-Medium',Sans-Serif; 
@@ -2360,7 +2360,7 @@ footer .col-md-7 img {
 	color: #58585a;
 	border-top: 1px solid #dbdbdb;
 }
-.b-compare .filtr .b-lead_box .lead {
+.b-compare .filtr .b-ic_lead_box .ic_lead {
 	margin-right: 10px; 
 	display: inline-block;
 	width: 20px;
@@ -2392,7 +2392,7 @@ footer .col-md-7 img {
 	background: #f8f9fb;
 	border-bottom: 1px solid #dbdbdb;
 }
-.b-compare_box .lead {
+.b-compare_box .ic_lead {
 	margin-left: 10px; 
 	display: inline-block;
 	width: 20px;
@@ -2867,7 +2867,7 @@ footer .col-md-7 img {
 	.b-compare .filtr .dropdown.open .nav li a:hover {
 		border: 0 none;
 	}
-	.b-compare .filtr .b-lead_box {
+	.b-compare .filtr .b-ic_lead_box {
 		text-align: center;
 	}
 	.b-compare_list {
