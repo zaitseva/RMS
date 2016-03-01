@@ -2373,7 +2373,7 @@ footer .col-md-7 img {
 	border-top: 1px solid #dbdbdb;
 }
 .b-compare .filtr .nav li {
-	min-height: 63px;
+	min-height: 65px;
 	font-family: 'Conv_Gotham-Medium',Sans-Serif; 
 	font-size: 12px;
 	line-height: 63px;
@@ -2384,7 +2384,7 @@ footer .col-md-7 img {
 
 .b-compare_box {
 	padding: 0 28px;
-	min-height: 63px;
+	min-height: 65px;
 	font-family: 'Conv_Vitesse-Medium',Sans-Serif; 
 	font-size: 13px;
 	line-height: 63px;
@@ -2470,6 +2470,7 @@ footer .col-md-7 img {
 	background: -webkit-linear-gradient(top, #002664 0%, #002f7c 100%);
 	background:      -o-linear-gradient(top, #002664 0%, #002f7c 100%);
 	background:         linear-gradient(to bottom, #002664 0%, #002f7c 100%);
+	border-bottom: 1px solid #dbdbdb;
 }
 .search_box .name {
 	display: block;
