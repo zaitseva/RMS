@@ -2640,6 +2640,10 @@ footer .col-md-7 img {
 	.search_popup .modal-dialog {
 		width: 600px;
 	}
+	.search_popup .b-runner_select .b-item {
+		margin-bottom: 10px; 
+		width: 48%;
+	}
 	.b-top-statistics .b-run_img {
 		top: auto;
 		bottom: -105px;
@@ -2963,6 +2967,10 @@ footer .col-md-7 img {
 	}
 	.tb-head tr td:first-child span.mob {
 		display: block;
+	}
+	.search_popup .b-runner_select .b-item {
+		margin-left: 0; 
+		width: 100%;
 	}
 	.b-total_finisher-stat .js-scroll:before {
 		top: 40px;
