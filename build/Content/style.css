@@ -493,6 +493,7 @@ a:hover {
 
 #nav.affix {
 	position: fixed;
+	z-index: 1;
 	top: 0;
 	left: 0;
 	margin: 0;
@@ -551,7 +552,7 @@ a:hover {
 
 #search.affix {
 	position: fixed;
-	z-index: 1; 
+	z-index: 0; 
 	top: 70px;
 	left: 0;
 	width: 100%;
@@ -1116,6 +1117,7 @@ footer .col-md-7 img {
 	border: 0 none;
 }
 .b-sub_menu .nav-tabs > li > a {
+	margin-right: 0;
 	font-family: 'Conv_Gotham-Medium',Sans-Serif;
 	font-size: 12px;
 	line-height: 38px; 
@@ -2062,6 +2064,12 @@ footer .col-md-7 img {
 .b-total_finisher-stat .col-md-5 {
 	padding: 0;
 }
+.b-total_finisher-stat .col-md-12 .col-md-6:first-child {
+	padding: 0 5px 0 0;
+}
+.b-total_finisher-stat .col-md-12 .col-md-6 {
+	padding: 0 0 0 5px;
+}
 .b-total_finisher-stat .col .f_age {
 	display: block;
 }
@@ -2496,6 +2504,10 @@ footer .col-md-7 img {
 	border-bottom: 5px solid #6f57a5;
 }
 
+.navwrapper {
+	display: none;
+}
+
 .search_popup .modal-dialog {
 	width: 960px;
 }
@@ -2628,6 +2640,9 @@ footer .col-md-7 img {
 }
 
 @media screen and (max-width: 990px) {
+	.b-title h3 {
+		padding-left: 10px;
+	}
 	.b-head h1 {
 		margin: 10px 0 20px 0; 
 		padding: 0 10px;
@@ -2695,6 +2710,9 @@ footer .col-md-7 img {
 	}
 	.search_popup .modal-dialog {
 		width: 100%;
+	}
+	#nav.affix .logo span {
+		font-size: 14px;
 	}
 	.b-womenrun {
 		display: none;
@@ -2930,6 +2948,63 @@ footer .col-md-7 img {
 		padding: 10px; 
 		color: #0f244c;
 	}
+	.b-filtr_head .dropdown.open {
+		position: fixed;
+		z-index: 101; 
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.b-filtr_head .dropdown.open > a {
+		color: #fff;
+		background: #0f244c;
+	}
+	.b-filtr_head .dropdown.open > a .caret {
+		background: url('../Content/images/close.png') no-repeat 0 center;
+	}
+	.b-filtr_head .dropdown.open .dropdown-menu {
+		position: fixed;
+		z-index: 3; 
+		top: 47px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.b-filtr_head .dropdown.open .dropdown-menu .nav-justified > li,
+	.b-filtr_head .dropdown.open .dropdown-menu .nav-tabs.nav-justified > li {
+		float: left;
+		width: 45%;
+	}
+	.b-sub_menu .dropdown.open {
+		-webkit-box-shadow: none;
+		        box-shadow: none;
+	}
+	.b-sub_menu .dropdown.open > a .caret {
+		background: url('../Content/images/arrow_up_02.png') no-repeat 0 center;
+	}
+	.b-sub_menu .dropdown.open .dropdown-menu {
+		position: fixed;
+		z-index: 3;
+		top: 130px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		color: #fff; 
+		background-color: rgba(0, 20, 53, .97);
+	}
+	.b-sub_menu .dropdown.open .nav-tabs > li > a {
+		background: none;
+		border: 0 none;
+	}
+	.b-sub_menu .dropdown.open .nav-tabs > li.active > a {
+		color: #fff;
+		background: none;
+		border: 0 none;
+	}
+	.b-sub_menu .dropdown.open .nav-tabs > li {
+		border-bottom: 1px solid #343c55;
+	}
 	.b-filtr_head .col-md-3 {
 		padding: 10px;
 	}
@@ -2971,6 +3046,56 @@ footer .col-md-7 img {
 	.search_popup .b-runner_select .b-item {
 		margin-left: 0; 
 		width: 100%;
+	}
+	#nav.affix .b-link {
+		display: none;
+	}
+	#nav.affix .navwrapper {
+		display: inline-block;
+		vertical-align: top;
+	}
+	#nav.affix .navbar-toggle {
+		margin-top: 20px; 
+		float: none;
+	}
+	#nav.affix .navbar-toggle .icon-bar {
+		background: #3a7dda;
+	}
+	#nav.affix .navbar-collapse.in {
+		position: fixed;
+		z-index: 3; 
+		top: 70px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 20, 53, .97);
+	}
+	#nav.affix .navbar-collapse.in .b-link {
+		position: relative;
+		right: auto;
+		display: block;
+		width: 100%;
+	}
+	#nav.affix .navbar-collapse.in .b-link a {
+		display: block;
+		color: #fff;
+		border-bottom: 1px solid #343c55; 
+		border-left: 0;
+	}
+	#nav.affix .navbar-collapse.in .social {
+		background: url('../Content/images/social_white.png') no-repeat 100% center;
+	}
+	#nav.affix .navbar-collapse.in .ic_close {
+		position: relative; 
+		text-align: center;
+	}
+	#nav.affix .navbar-collapse.in .ic_close:after {
+		display: inline-block;
+		width: 15px;
+		height: 70px;
+		content: '';
+		vertical-align: top;
+		background: url('../Content/images/close.png') no-repeat center center;
 	}
 	.b-total_finisher-stat .js-scroll:before {
 		top: 40px;
